@@ -41,8 +41,8 @@ price = time/1000000000 * volatility * @factor #Price of security with time norm
 #Introduce mutated constant factor to volatility so that each security fluctuates at a different magnitude but consistently across game-states.
 
 #Future
+#Different growth factor for each security based on ticker again. Ticker based sine function between 0.5-1.5x growth of time scale?
+#Spread volatility over several hours. Larger sine function applied on top?
 #Username.hash #generate hash from username to influence events (this will cause different game-states to deviate).
 #Black swan events/Earnings events - Prescribe new factor with extremely low (~0.00001%) chance of significantly rebasing price of security (0.5x - 5x).
 #Note that introducing chance will cause game-states to deviate as well. Perhaps a time-based threshold and fluctuation based on mutated ticker.
-
-#This might be good for testing requirement.
