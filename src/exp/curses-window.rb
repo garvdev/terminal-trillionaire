@@ -4,9 +4,9 @@ require "logger"
 
 module Logwatch
   class Window
-
+    
     attr_reader :main, :messages, :top_sections, :stats
-
+    
     def initialize
       Curses.init_screen
       Curses.curs_set 0 # invisible cursor
@@ -45,7 +45,7 @@ module Logwatch
     end
 
     def print_msg(msg)
-      @lines += Verse::Wrapping.new(msg).wrap(@messages.maxx - 10).split("\n")
+      @lines += msg
       paint_messages!
     end
 
@@ -81,3 +81,19 @@ module Logwatch
 
   end
 end
+
+
+# Curses.init_screen
+# begin
+  win = Curses.stdscr
+  x = win.maxx / 2
+  y = win.maxy / 2
+  win.setpos(y, x)
+  win.addstr("Hello World")
+  win.refresh
+  win.getch
+# ensure
+#   Curses.close_screen
+# end
+
+# It would appear that the window requires information from the main program, fed in through update_stats, and update_top_sections, before it will print anything.
