@@ -23,6 +23,9 @@ Display final formula in algebraic format.
 #### A review of your development/build process including challenges, ethical issues, favourite parts, etc
 
 ##### Agile approach
+
+Software Development - Agile
+
 Client - me
 I don't know what I want.
 I don't know if what I think I want is possible with the tools available.
@@ -30,16 +33,17 @@ Preliminary research and experimentation.
 Design basic model (MVP). Design additional features.
 Begin development.
 
-Kanban Method of Project Management.
+Project Management - Kanban
 Show Trello board and briefly explain lists and colour coding.
 
 ##### Key takeaways
 
 
 ##### Future
-Real-time screen updating - Ruby Curses
-Implement concurrency - Ruby Threads
-Update model to account for black swan events, earnings reports, add derivatives like options and futures.
+Ruby Curses - Real-time screen updating - Live Market Dashboard with real-time price updates.
+Ruby Threads - Concurrency - Build GUI which can accept user input to interact with the Live Market Dashboard.
+Improve model to simulate event-driven movements such as black swan events or earnings releases.
+Implement derivatives like options and futures - complex derivative strategy visualisation e.g. covered calls, straddles, collars.
 
 <hr>
 No.	Slides must include…
