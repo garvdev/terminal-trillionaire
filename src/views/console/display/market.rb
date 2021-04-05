@@ -8,8 +8,8 @@ module Views
             module Market
                 def self.show
                     Curses.init_screen
-                    curs_set(0)
-                    noecho
+                    # curs_set(0)
+                    # noecho
                     system 'clear'
                     win = Curses.stdscr
                     t = Thread.new do # new thread
@@ -31,7 +31,8 @@ module Views
                             win.clear # clear buffer
                         end
                     end
-                    win.getch # get character
+                    
+                    win.getch
                     t.kill # kill thread
                     Curses.close_screen # close window
                 end

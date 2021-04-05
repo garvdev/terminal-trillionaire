@@ -14,7 +14,7 @@ module Market
             time_stamps.each do |key,value|
                 #Prepare variables
                 time = Time.now.to_f + value
-                scaled_time = time/1_000_000_000
+                scaled_time = time**3/1e27
                 ticker_val = ticker.sum
                 
                 #Calculate unique ticker factor

@@ -48,6 +48,14 @@ price = time/1_000_000_000 * volatility * @factor #Price of security with time s
 #Factors based on sum of ticker ascii codes was too similar (~290), i.e. all securities ended up around that price.
 #Ticker sum with exponent of 10 to 'stretch' out variances between each sum, and passed through sine function to normalise between -1 and 1. Add 1 to change range to 0 - 2. Multiply this factor to original ticker sum for new price.
 
+# Model 7
+time = Time.now.to_f #Generate float from current time as specified by Time class, using type coercion to return a float. Always increasing time += 1 per second. Divided by a billion to scale.
+volatility = Math.sin(time * @factor)/100 + 1 #Sine-based function with ticker factor to output normalised positive/negative deviation from linear increase in security price.
+@factor = ((Math.sin(@ticker.sum**10) + 1) * @ticker.sum) #Generate unique factor based on instance of security and its characters ascii codes summed.
+price = time**3/1e27 * volatility * @factor #Price of security with time scaled after volatility has been calculated.
+#Base price from time function did not grow at realistic rates,totalling 10% returns over a decade.
+#Exponent applied to time to stretch price growth per second and divided by large number to scale back to realistic prices.
+
 #Future
 #Different growth factor for each security based on ticker again. Ticker based sine function between 0.5-1.5x growth of time scale?
 #Spread volatility over several hours. Larger sine function applied on top?
