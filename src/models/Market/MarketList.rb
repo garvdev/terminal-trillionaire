@@ -1,13 +1,15 @@
-require "./SecurityItem"
+require_relative "./SecurityItem.rb"
 
 class MarketList
-    tickers = ["PEAR","EDSN","CHLL","YMMY","EXCL","WATR","LAMP","TEEM","SOLO","CODE"]
-    marketlist = {}
-    
-    tickers.each do |ticker|
-        t = SecurityItem.new(ticker)       
-        marketlist[t.ticker] = t.prices
-    end
+    attr_reader :marketlist
 
-    p marketlist
+    TICKERS = ["PEAR","EDSN","CHLL","YMMY","EXCL","WATR","LAMP","TEEM","SOLA","CODE"]
+
+    def initialize
+        @marketlist = {}
+        TICKERS.each do |ticker|
+            t = SecurityItem.new(ticker)       
+            @marketlist[t.ticker] = t.prices
+        end
+    end
 end

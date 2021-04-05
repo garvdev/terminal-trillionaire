@@ -19,3 +19,252 @@ SecurityPricing
 Finished in 10.19 seconds (files took 0.31708 seconds to load)
 5 examples, 0 failures
 
+
+SecurityPricing
+  should return 5 key value pairs for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return floats for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return 10000 sets of security prices across all timestamps in less than 1 second
+  should return prices with a distinct growth curve over time
+  should return prices fluctuating within bands of -2% and 2% each second
+
+Finished in 10.15 seconds (files took 0.31577 seconds to load)
+5 examples, 0 failures
+
+
+SecurityPricing
+  should return 5 key value pairs for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return floats for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return 10000 sets of security prices across all timestamps in less than 1 second
+[true, false, false, false, true]
+  should return prices with a distinct growth curve over time
+  should return prices fluctuating within bands of -2% and 2% each second
+
+Finished in 10.14 seconds (files took 0.27742 seconds to load)
+5 examples, 0 failures
+
+
+SecurityPricing
+  should return 5 key value pairs for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return floats for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return 10000 sets of security prices across all timestamps in less than 1 second
+[false, true]
+  should return prices with a distinct growth curve over time (FAILED - 1)
+  should return prices fluctuating within bands of -2% and 2% each second
+
+Failures:
+
+  1) SecurityPricing should return prices with a distinct growth curve over time
+     Failure/Error: expect(price_array.length).to eq(1)
+
+       expected: 1
+            got: 5
+
+       (compared using ==)
+     # ./SecurityPricing_spec.rb:45:in `block (2 levels) in <top (required)>'
+
+Finished in 10.17 seconds (files took 0.47674 seconds to load)
+5 examples, 1 failure
+
+Failed examples:
+
+rspec ./SecurityPricing_spec.rb:38 # SecurityPricing should return prices with a distinct growth curve over time
+
+
+SecurityPricing
+  should return 5 key value pairs for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return floats for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return 10000 sets of security prices across all timestamps in less than 1 second
+[true, false]
+  should return prices with a distinct growth curve over time (FAILED - 1)
+  should return prices fluctuating within bands of -2% and 2% each second
+
+Failures:
+
+  1) SecurityPricing should return prices with a distinct growth curve over time
+     Failure/Error: expect(price_array.uniq.length).to eq(1)
+
+       expected: 1
+            got: 2
+
+       (compared using ==)
+     # ./SecurityPricing_spec.rb:45:in `block (2 levels) in <top (required)>'
+
+Finished in 10.17 seconds (files took 0.35112 seconds to load)
+5 examples, 1 failure
+
+Failed examples:
+
+rspec ./SecurityPricing_spec.rb:38 # SecurityPricing should return prices with a distinct growth curve over time
+
+
+SecurityPricing
+  should return 5 key value pairs for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return floats for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return 10000 sets of security prices across all timestamps in less than 1 second
+  should return prices with a distinct growth curve over time (FAILED - 1)
+  should return prices fluctuating within bands of -2% and 2% each second
+
+Failures:
+
+  1) SecurityPricing should return prices with a distinct growth curve over time
+     Failure/Error: expect(price_array.uniq.length).to eq(1)
+
+       expected: 1
+            got: 2
+
+       (compared using ==)
+     # ./SecurityPricing_spec.rb:44:in `block (2 levels) in <top (required)>'
+
+Finished in 10.17 seconds (files took 0.28489 seconds to load)
+5 examples, 1 failure
+
+Failed examples:
+
+rspec ./SecurityPricing_spec.rb:38 # SecurityPricing should return prices with a distinct growth curve over time
+
+
+SecurityPricing
+  should return 5 key value pairs for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return floats for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return 10000 sets of security prices across all timestamps in less than 1 second
+  should return prices with a distinct growth curve over extended periods of time (FAILED - 1)
+
+SecurityPricing
+  should return 5 key value pairs for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return floats for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return 10000 sets of security prices across all timestamps in less than 1 second
+[false, true, false, false, true]
+  should return prices with a distinct growth curve over extended periods of time (FAILED - 1)
+
+SecurityPricing
+  should return 5 key value pairs for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return floats for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return 10000 sets of security prices across all timestamps in less than 1 second
+[false, true, true, true, true]
+  should return prices with a distinct growth curve over extended periods of time (FAILED - 1)
+  should return prices fluctuating within bands of -2% and 2% each second
+
+Failures:
+
+  1) SecurityPricing should return prices with a distinct growth curve over extended periods of time
+     Failure/Error: expect(price_array.uniq.length).to eq(1)
+
+       expected: 1
+            got: 2
+
+       (compared using ==)
+     # ./SecurityPricing_spec.rb:45:in `block (2 levels) in <top (required)>'
+
+Finished in 10.15 seconds (files took 0.20443 seconds to load)
+5 examples, 1 failure
+
+Failed examples:
+
+rspec ./SecurityPricing_spec.rb:38 # SecurityPricing should return prices with a distinct growth curve over extended periods of time
+
+
+SecurityPricing
+  should return 5 key value pairs for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return floats for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return 10000 sets of security prices across all timestamps in less than 1 second
+[false, false, true, true, true]
+  should return prices with a distinct growth curve over extended periods of time (FAILED - 1)
+  should return prices fluctuating within bands of -2% and 2% each second
+
+Failures:
+
+  1) SecurityPricing should return prices with a distinct growth curve over extended periods of time
+     Failure/Error: expect(price_array.uniq.length).to eq(1)
+
+       expected: 1
+            got: 2
+
+       (compared using ==)
+     # ./SecurityPricing_spec.rb:45:in `block (2 levels) in <top (required)>'
+
+Finished in 10.17 seconds (files took 0.20693 seconds to load)
+5 examples, 1 failure
+
+Failed examples:
+
+rspec ./SecurityPricing_spec.rb:38 # SecurityPricing should return prices with a distinct growth curve over extended periods of time
+
+
+SecurityPricing
+  should return 5 key value pairs for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return floats for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return 10000 sets of security prices across all timestamps in less than 1 second
+[true, true, false, false, true]
+  should return prices with a distinct growth curve over extended periods of time (FAILED - 1)
+  should return prices fluctuating within bands of -2% and 2% each second
+
+Failures:
+
+  1) SecurityPricing should return prices with a distinct growth curve over extended periods of time
+     Failure/Error: expect(price_array.uniq.length).to eq(1)
+
+       expected: 1
+            got: 2
+
+       (compared using ==)
+     # ./SecurityPricing_spec.rb:45:in `block (2 levels) in <top (required)>'
+
+Finished in 10.16 seconds (files took 0.19879 seconds to load)
+5 examples, 1 failure
+
+Failed examples:
+
+rspec ./SecurityPricing_spec.rb:38 # SecurityPricing should return prices with a distinct growth curve over extended periods of time
+
+
+SecurityPricing
+  should return 5 key value pairs for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return floats for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return 10000 sets of security prices across all timestamps in less than 1 second
+[54.11672769564907, 53.794909273714154, 53.27045067148517, 52.89409096572449, 43.77820404359424]
+[true, true, false, false, true]
+  should return prices with a distinct growth curve over extended periods of time (FAILED - 1)
+  should return prices fluctuating within bands of -2% and 2% each second
+
+Failures:
+
+  1) SecurityPricing should return prices with a distinct growth curve over extended periods of time
+     Failure/Error: expect(price_array.uniq.length).to eq(1)
+
+       expected: 1
+            got: 2
+
+       (compared using ==)
+     # ./SecurityPricing_spec.rb:46:in `block (2 levels) in <top (required)>'
+
+Finished in 10.16 seconds (files took 0.37797 seconds to load)
+5 examples, 1 failure
+
+Failed examples:
+
+rspec ./SecurityPricing_spec.rb:38 # SecurityPricing should return prices with a distinct growth curve over extended periods of time
+
+
+SecurityPricing
+  should return 5 key value pairs for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return floats for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return 10000 sets of security prices across all timestamps in less than 1 second
+[53.35526453684352, 53.15792216118201, 54.02979976389678, 53.097410682303185, 43.197675044723276]
+[true, true, true, true, true]
+  should return prices with a distinct growth curve over extended periods of time
+  should return prices fluctuating within bands of -2% and 2% each second
+
+Finished in 10.15 seconds (files took 0.20514 seconds to load)
+5 examples, 0 failures
+
+
+SecurityPricing
+  should return 5 key value pairs for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return floats for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return 10000 sets of security prices across all timestamps in less than 1 second
+  should return prices with a distinct growth curve over extended periods of time
+  should return prices fluctuating within bands of -2% and 2% each second
+
+Finished in 10.14 seconds (files took 0.21104 seconds to load)
+5 examples, 0 failures
+

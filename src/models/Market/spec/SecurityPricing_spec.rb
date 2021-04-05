@@ -18,6 +18,7 @@ describe "SecurityPricing" do
         float_array = Market::SecurityPricing.prices("TEST").map{|k,v| v.is_a?(Float)}.uniq
         
         # pass test if full array is true
+        expect(float_array.uniq.length).to eq(1)
         expect(!!float_array).to eq(true)
     end
 
@@ -34,13 +35,14 @@ describe "SecurityPricing" do
     end
     
     # growth test
-    it "should return prices with a distinct growth curve over time" do
+    it "should return prices with a distinct growth curve over extended periods of time" do
         # create array of price values
         price_array = Market::SecurityPricing.prices("TEST").values
-        # iterate through array, changing values to true if smaller than following value
-        price_array.map!.with_index {|x,i| price_array[i+1].nil? ? true : price_array[i+1] > x}
+        # iterate through timestamps, excluding current/day/week comparison, changing values to true if smaller than following value
+        price_array.map!.with_index {|x,i| (price_array[i+1].nil? || i < 2) ? true : x > price_array[i+1]}
         # pass test if full array is true
-        expect(!!price_array.uniq).to eq(true)
+        expect(price_array.uniq.length).to eq(1)
+        expect(!!price_array).to eq(true)
     end
 
     # volatility test

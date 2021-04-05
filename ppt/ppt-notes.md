@@ -1,5 +1,8 @@
 #### A walk-through of your Terminal application, its features and how it used
 
+Copy Portfolio presentation format
+Leverage accounting and finance background
+
 ##### Background
 
 ##### Purpose
@@ -10,7 +13,7 @@
 
 #### A walk-through of the logic of your Terminal application and code
 
-##### Control Flow Diagram / MVC
+##### Control Flow Diagram / Class Diagram
 
 ##### Classes/Modules
 
@@ -27,16 +30,19 @@ Display final formula in algebraic format.
 Software Development - Agile
 
 User Stories
+
+User - anyone who cares
 As a user, I want to view the latest market data, so that I can make informed trading decisions.
 As a user, I want to view my portfolio, so that I can evaluate my current holdings.
 As a user, I want to save my portfolio, so that I can return to the simulator at a later point in time.
 As a user, I want to quickly execute trades, so that I can become filthy rich.
 
 Client - me
-As the client, I want to simulate realistic market movements, so that my users become addicted to the app.
-I don't know if what I think I want is possible with the tools available.
+As the client, I want to simulate a large basket of securities, so that users have a variety of options.
+As the client, I want to simulate realistic market movements over extended periods of time, so that there is a sense of realism.
+As the client, I want to simulate volatile market movements over short periods of time, so that my users become addicted and I can monetise their attention.
 
-Developer - also me
+Developer Strategy - also me
 Preliminary research and experimentation - MVC, OOP, Anti-Patterns, Gems, Curses, Threads.
 Design basic model (MVC). Design additional features.
 Begin developing MVP.
@@ -56,6 +62,7 @@ Shoutout to Jake from officeworks.
 Ruby Threads - Concurrency - Build GUI which can accept user input to interact with the Live Market Dashboard.
 Improve model to simulate event-driven movements such as black swan events or earnings releases.
 Implement derivatives like options and futures - complex derivative strategy visualisation e.g. covered calls, straddles, collars.
+Build a lending facility - investing with leverage, margin calls, interest etc.
 
 <hr>
 No.	Slides must include…
