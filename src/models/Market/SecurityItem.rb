@@ -1,0 +1,4 @@
+class Security
+
+    def initialize
+        
