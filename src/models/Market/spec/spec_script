@@ -1,0 +1,3 @@
+# !/usr/bin/sh
+
+rspec ./SecurityPricing_spec.rb --format documentation | tee -a SecurityPricing_tests.txt

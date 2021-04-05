@@ -1,0 +1,21 @@
+SecurityPricing
+  should return 5 key value pairs for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return floats for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return 10000 sets of security prices across all timestamps in less than 1 second
+  should return prices with a distinct growth curve over time
+  should return prices fluctuating within bands of -2% and 2% each second
+
+Finished in 10.14 seconds (files took 0.36728 seconds to load)
+5 examples, 0 failures
+
+
+SecurityPricing
+  should return 5 key value pairs for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return floats for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return 10000 sets of security prices across all timestamps in less than 1 second
+  should return prices with a distinct growth curve over time
+  should return prices fluctuating within bands of -2% and 2% each second
+
+Finished in 10.19 seconds (files took 0.31708 seconds to load)
+5 examples, 0 failures
+
