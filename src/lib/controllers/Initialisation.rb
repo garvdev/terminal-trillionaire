@@ -8,9 +8,10 @@ module Controllers
         def initialise
             system 'clear'
             portfolio = Portfolio::Record.new
-            portfolio.user.nil? ? (portfolio.new_user(GetUser.name); status = :new) : status = :old
+            portfolio.user.nil? ? (portfolio.new_user(GetUser.name); user_status = :new) : user_status = :old
             system 'clear'
-            Title.show(portfolio.user, status)
-        end        
+            title(portfolio.user, user_status)
+            user_status
+        end
     end
 end
