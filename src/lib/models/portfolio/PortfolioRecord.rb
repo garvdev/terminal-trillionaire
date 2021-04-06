@@ -2,17 +2,19 @@ require 'yaml'
 
 module Portfolio
     class Record
-        attr_accessor :portfolio
+        attr_accessor :history, :user
 
         def initialize
-            @portfolio = YAML.load(File.read('trades.yml'))
+            @history = YAML.load(File.read('history.yml'))
+            @user = @history[0]
             rescue SystemCallError
-            @portfolio = nil
+            @history = []
+            @user = nil
         end
 
         def save
-            @portfolio << self
-            File.open('trades.yml','w') {|file| file.write(TRADES.to_yaml)}
+            @history << self
+            File.open('history.yml','w') {|file| file.write(TRADES.to_yaml)}
         end
     end
 end

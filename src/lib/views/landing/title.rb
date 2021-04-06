@@ -5,7 +5,7 @@ include Curses
 module Views
     module Landing
         module Title
-            def self.show
+            def self.show(user, status)
                 Curses.init_screen
                 Curses.start_color
                 curs_set(0)
@@ -15,17 +15,19 @@ module Views
                 win.clear # clear buffer
                 sleep 1 # sleep before adding string so program has time to set cursor
 
-                intro = [["Hey there!                 ",2],
-                         ["It's good to see you again.",2],
-                         ["Welcome back to.           ",1],
-                         ["Welcome back to..          ",1],
-                         ["Welcome back to...         ",1],
-                         ["                           ",0]]
+                intro = [["Hey there, #{user}!        ",:all,2],
+                         ["It's good to see you again.",:old,2],
+                         ["It's good to have you here.",:new,2],
+                         ["Welcome to.                ",:all,1],
+                         ["Welcome to..               ",:all,1],
+                         ["Welcome to...              ",:all,1],
+                         ["                           ",:all,0]]
                 intro.each do |msg|
+                    next if msg[1] != :all && msg[1] != status
                     win.setpos(1,2)
                     win.addstr("#{msg[0]}")
                     win.refresh
-                    sleep msg[1]
+                    sleep msg[2]
                 end
 
                 t = Thread.new do # new thread
@@ -49,13 +51,15 @@ module Views
                         sleep 0.5
                     end
                 end
-
-                sleep 3
+                
+                sleep 2
                 win.addstr("\n  **Loud Airhorn Noises**")
+                win.refresh
+                sleep 2
+                win.addstr("\n  Press any key to continue.")
                 win.refresh
                 
                 win.getch
-
                 t.kill # kill thread
                 Curses.close_screen # close window
             end
