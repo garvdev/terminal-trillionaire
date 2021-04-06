@@ -2,8 +2,21 @@ require 'yaml'
 require 'symmetric-encryption'
 
 module Portfolio
+    module YamlEncryption
+        def encrypt(file)
+            encrypt = File.read(file)
+            SymmetricEncryption::Writer.open(file) {|file| file.write(encrypt)}
+        end
+        def decrypt(file)
+            decrypt = SymmetricEncryption::Reader.open(file) {|file| file.read}
+            File.open(file,'w') {|file| file.write(decrypt)}
+        end
+    end
+
     class Record
         attr_accessor :history, :user
+        include YamlEncryption
+
         SymmetricEncryption.cipher = SymmetricEncryption::Cipher.new(
             key:         "please dont peek",
             iv:          "please dont peek",
@@ -11,14 +24,12 @@ module Portfolio
         )
 
         def initialize
-            decrypt = SymmetricEncryption::Reader.open('portfolio.yml') {|file| file.read}
-            File.open('portfolio.yml','w') {|file| file.write(decrypt)}
+            decrypt('portfolio.yml')
             @history = YAML.load(File.read('portfolio.yml'))
-            encrypt = File.read('portfolio.yml')
-            SymmetricEncryption::Writer.open('portfolio.yml') {|file| file.write(encrypt)}
+            encrypt('portfolio.yml')
             
             @user = @history[0]
-
+            
         rescue SystemCallError
             @history = []
             @user = nil
@@ -26,8 +37,15 @@ module Portfolio
         
         def save
             File.open('portfolio.yml','w') {|file| file.write(@history.to_yaml)}
-            encrypt = File.read('portfolio.yml')
-            SymmetricEncryption::Writer.open('portfolio.yml') {|file| file.write(encrypt)}
+            encrypt('portfolio.yml')
         end
+        
+        def new_user(name)
+            @user = name
+            @history << @user
+            @history << [:CASH, 1_000_000_000, 1]
+            save
+        end
+        
     end
 end
