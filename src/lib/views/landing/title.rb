@@ -1,4 +1,3 @@
-require "colorize"
 require "curses"
 include Curses
 
