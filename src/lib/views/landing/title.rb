@@ -18,9 +18,12 @@ module Views
                 intro = [["Hey there, #{user}!        ",:all,2],
                          ["It's good to see you again.",:old,2],
                          ["It's good to have you here.",:new,2],
-                         ["Welcome to.                ",:all,1],
-                         ["Welcome to..               ",:all,1],
-                         ["Welcome to...              ",:all,1],
+                         ["Welcome to.                ",:new,1],
+                         ["Welcome to..               ",:new,1],
+                         ["Welcome to...              ",:new,1],
+                         ["Welcome back to.           ",:old,1],
+                         ["Welcome back to..          ",:old,1],
+                         ["Welcome back to...         ",:old,1],
                          ["                           ",:all,0]]
                 intro.each do |msg|
                     next if msg[1] != :all && msg[1] != status

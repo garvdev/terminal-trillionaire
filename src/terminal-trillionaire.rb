@@ -3,7 +3,7 @@ require "./lib/views/console/console.rb"
 include Controllers::Initialisation
 
 begin
-    system 'clear'
     initialise
-    console
+    # console
+
 end

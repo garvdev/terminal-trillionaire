@@ -21,4 +21,4 @@ gem "rspec", "~> 3.10"
 
 gem "curses", "~> 1.4"
 
-gem "yaml_vault", "~> 1.1"
+gem "symmetric-encryption", "~> 4.3"
