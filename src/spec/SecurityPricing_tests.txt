@@ -279,3 +279,41 @@ SecurityPricing
 Finished in 10.18 seconds (files took 0.42623 seconds to load)
 5 examples, 0 failures
 
+
+An error occurred while loading ./.SecurityPricing_spec.rb.
+Failure/Error: __send__(method, file)
+
+LoadError:
+  cannot load such file -- /Users/garveychan/Git/terminal-trillionaire/src/spec/.SecurityPricing_spec.rb
+# /Users/garveychan/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/configuration.rb:2112:in `load'
+# /Users/garveychan/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/configuration.rb:2112:in `load_file_handling_errors'
+# /Users/garveychan/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/configuration.rb:1615:in `block in load_spec_files'
+# /Users/garveychan/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/configuration.rb:1613:in `each'
+# /Users/garveychan/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/configuration.rb:1613:in `load_spec_files'
+# /Users/garveychan/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:102:in `setup'
+# /Users/garveychan/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:86:in `run'
+# /Users/garveychan/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:71:in `run'
+# /Users/garveychan/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:45:in `invoke'
+# /Users/garveychan/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/exe/rspec:4:in `<top (required)>'
+# /Users/garveychan/.rbenv/versions/3.0.0/bin/rspec:23:in `load'
+# /Users/garveychan/.rbenv/versions/3.0.0/bin/rspec:23:in `<main>'
+# 
+#   Showing full backtrace because every line was filtered out.
+#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and
+#   RSpec::Configuration#backtrace_inclusion_patterns for more information.
+No examples found.
+
+Finished in 0.00005 seconds (files took 0.28834 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
+
+
+SecurityPricing
+  should return 5 key value pairs for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return floats for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return 10000 sets of security prices across all timestamps in less than 1 second
+  should return prices with a distinct growth curve over extended periods of time
+  should return prices fluctuating within bands of -2% and 2% each second
+
+Finished in 10.13 seconds (files took 0.35316 seconds to load)
+5 examples, 0 failures
+
