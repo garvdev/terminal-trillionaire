@@ -61,7 +61,6 @@ module Views
                 win.addstr("\n  Press any key to continue.")
                 win.refresh
                 
-                win.attrset(color_pair(2))
                 win.getch
                 t.kill 
                 Curses.close_screen

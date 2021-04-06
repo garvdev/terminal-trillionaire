@@ -12,13 +12,16 @@ module Views
                     noecho
                     system 'clear'
                     win = Curses.stdscr
-                    t = Thread.new do # new thread
+                    win.clear
+                    t = Thread.new do
                         while true
-                            win.clear # clear buffer
-                            sleep 1 # sleep before adding string so program has time to set cursor
+                            sleep 1
                             x = 0
                             y = 0
                             win.setpos(y, x)
+
+                            Curses.init_pair(2, Curses::COLOR_WHITE, Curses::COLOR_BLACK)
+                            win.attrset(color_pair(2))
 
                             table = []
                             yield.each_pair do |k,v|
@@ -27,15 +30,19 @@ module Views
 
                             tty_table = TTY::Table.new(header: ["Ticker", "Current", "1D", "1M", "1Y", "10Y"], rows: table)
                         
-                            win.addstr("#{tty_table.render(:unicode, alignment: [:center])}") # add string to buffer
-                            win.refresh # bring buffer to screen
+                            win.addstr("#{tty_table.render(:unicode, alignment: [:center])}") 
+                            win.refresh 
                         end
                     end
+
+                    sleep 5
+                    win.addstr("\nPress any key to return to the console.")
+                    win.refresh
                     
                     win.getch
 
-                    t.kill # kill thread
-                    Curses.close_screen # close window
+                    t.kill 
+                    Curses.close_screen 
                 end
             end
         end
