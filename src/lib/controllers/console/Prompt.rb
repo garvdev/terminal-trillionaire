@@ -23,6 +23,8 @@ module Controllers
                             p "placeholder"
                         when "calculator"
                             p "placeholder"
+                        when "help"
+                            p "placeholder"
                         when "exit"
                             system 'clear'
                             exit
