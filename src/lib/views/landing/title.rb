@@ -11,8 +11,8 @@ module Views
                 noecho
                 system 'clear'
                 win = Curses.stdscr
-                win.clear # clear buffer
-                sleep 1 # sleep before adding string so program has time to set cursor
+                win.clear 
+                sleep 1 
 
                 intro = [["Hey there, #{user}!        ",:all,2],
                          ["It's good to see you again.",:old,2],
@@ -32,7 +32,7 @@ module Views
                     sleep msg[2]
                 end
 
-                t = Thread.new do # new thread
+                t = Thread.new do 
                     Curses.init_pair(1, Curses::COLOR_GREEN, Curses::COLOR_BLACK)
                     Curses.init_pair(2, Curses::COLOR_WHITE, Curses::COLOR_BLACK)
                     flash = true
@@ -61,9 +61,10 @@ module Views
                 win.addstr("\n  Press any key to continue.")
                 win.refresh
                 
+                win.attrset(color_pair(2))
                 win.getch
-                t.kill # kill thread
-                Curses.close_screen # close window
+                t.kill 
+                Curses.close_screen
             end
         end
     end
