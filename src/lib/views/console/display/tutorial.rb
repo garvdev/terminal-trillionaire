@@ -18,7 +18,7 @@ module Views
                     tutorial = [["The year is 2050...\n",:all,3],
                                 ["High speed automated trading bots have squeezed all the alpha from the market;\n",:all,3],
                                 ["Poor housing market policy has left all the wealth concentrated in the top 0.1% of society;\n",:all,3],
-                                ["Elon Musk is still manipulating securities and cryptocurrency on Twitter.\n",:all,4],
+                                ["Elon Tusk is still manipulating securities and cryptocurrency on Twitter.\n",:all,4],
                                 ["But there is hope...\n",:all,3],
                                 ["You are a precocious 6 year old who has stumbled upon an old terminal in the attic.\n",:all,3],
                                 ["Intrigued, you pick it up and play with the controls, feeling a slight tingle in your fingertips.\n",:all,3],
