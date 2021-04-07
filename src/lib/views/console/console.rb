@@ -1,5 +1,5 @@
 require_relative "../../controllers/Initialisation.rb"
-require_relative "../TimeoutSleep.rb"
+require_relative "../SleepKeyPress.rb"
 require 'tty-prompt'
 require "io/console"
 
@@ -15,7 +15,7 @@ module Views
             fjordan.each do |msg|
                 next if msg[1] != :all && msg[1] != user_status
                 puts msg[0]
-                TimeoutSleep(msg[2],STDIN) if first_console == true 
+                SleepKeyPress(msg[2],STDIN) if first_console == true 
             end
             
             STDIN.iflush

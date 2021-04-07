@@ -1,6 +1,6 @@
 require "tty-table"
 require "curses"
-require_relative "../../TimeoutSleep.rb"
+require_relative "../../SleepKeyPress.rb"
 
 include Curses
 include Views
@@ -40,7 +40,7 @@ module Views
                         end
                     end
 
-                    TimeoutSleep(5,win)
+                    SleepKeyPress(5,win)
                     win.addstr("\nPress any key to return to the console.")
                     win.refresh
                     

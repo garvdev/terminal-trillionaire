@@ -1,5 +1,5 @@
 require "curses"
-require_relative "../../TimeoutSleep.rb"
+require_relative "../../SleepKeyPress.rb"
 
 include Curses
 include Views
@@ -33,7 +33,7 @@ module Views
                     tutorial.each do |msg|
                         win.addstr("#{msg[0]}")
                         win.refresh
-                        TimeoutSleep(msg[2],win)
+                        SleepKeyPress(msg[2],win)
                     end
 
                     win.addstr("\nPress any key to continue to the console.")

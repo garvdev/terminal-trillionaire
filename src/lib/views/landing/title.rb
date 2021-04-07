@@ -1,5 +1,5 @@
 require "curses"
-require_relative "../TimeoutSleep.rb"
+require_relative "../SleepKeyPress.rb"
 
 include Curses
 include Views
@@ -32,8 +32,7 @@ module Views
                 win.setpos(1,2)
                 win.addstr("#{msg[0]}")
                 win.refresh
-
-                TimeoutSleep(msg[2],win)
+                SleepKeyPress(msg[2],win)
             end
 
             t = Thread.new do 
@@ -57,12 +56,10 @@ module Views
                     sleep 0.5
                 end
             end
-            
-            TimeoutSleep(2,win)
+            SleepKeyPress(2,win)
             win.addstr("\n  **Loud Airhorn Noises**")
             win.refresh
-            
-            TimeoutSleep(2,win)
+            SleepKeyPress(2,win)
             win.addstr("\n  Press any key to continue.")
             win.refresh
             
