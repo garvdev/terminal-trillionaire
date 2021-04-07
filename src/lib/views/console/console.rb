@@ -35,7 +35,7 @@ module Views
                 {name: "- Help", value: "help", disabled: "(out of order)"},
                 {name: "- Exit", value: "exit"} 
             ]
-            tty_prompt.select("What can I help you with today?\n", selections)
+            tty_prompt.select("What can I help you with today?\n", selections, cycle: true, per_page: 10, show_help: :always)
         end
     end
 end
