@@ -1,6 +1,9 @@
 require "tty-table"
 require "curses"
+require_relative "../../TimeoutSleep.rb"
+
 include Curses
+include Views
 
 module Views
     module Console
@@ -13,6 +16,8 @@ module Views
                     system 'clear'
                     win = Curses.stdscr
                     win.clear
+                    sleep 1
+                    
                     t = Thread.new do
                         while true
                             sleep 1
@@ -35,7 +40,7 @@ module Views
                         end
                     end
 
-                    sleep 5
+                    TimeoutSleep(5,win)
                     win.addstr("\nPress any key to return to the console.")
                     win.refresh
                     

@@ -1,6 +1,10 @@
 require_relative "../../controllers/Initialisation.rb"
+require_relative "../TimeoutSleep.rb"
 require 'tty-prompt'
+require "io/console"
+
 include Controllers::Initialisation
+include Views
 
 module Views
     module Console
@@ -11,13 +15,15 @@ module Views
             fjordan.each do |msg|
                 next if msg[1] != :all && msg[1] != user_status
                 puts msg[0]
-                sleep msg[2] if first_console == true
+                TimeoutSleep(msg[2],STDIN) if first_console == true 
             end
             
+            STDIN.iflush
+
             tty_prompt = TTY::Prompt.new
             
             if user_status == :new
-                tty_prompt.yes?("Would you like a briefing?") ? (return "brief") : (puts "No worries! ")
+                tty_prompt.yes?("Would you like a briefing?") {|q| q.suffix "y/n"} ? (return "brief") : (puts "No worries! ")
             end
             
             selections = [

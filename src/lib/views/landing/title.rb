@@ -1,16 +1,20 @@
 require "curses"
+require_relative "../TimeoutSleep.rb"
+
 include Curses
+include Views
 
 module Views
     module Landing
         def title(user, status)
             Curses.init_screen
             Curses.start_color
+            system 'clear'
             curs_set(0)
             noecho
-            system 'clear'
+
             win = Curses.stdscr
-            win.clear 
+            win.clear
             sleep 1 
 
             intro = [["Hey there, #{user}!        ",:all,2],
@@ -28,7 +32,8 @@ module Views
                 win.setpos(1,2)
                 win.addstr("#{msg[0]}")
                 win.refresh
-                sleep msg[2]
+
+                TimeoutSleep(msg[2],win)
             end
 
             t = Thread.new do 
@@ -53,10 +58,11 @@ module Views
                 end
             end
             
-            sleep 2
+            TimeoutSleep(2,win)
             win.addstr("\n  **Loud Airhorn Noises**")
             win.refresh
-            sleep 2
+            
+            TimeoutSleep(2,win)
             win.addstr("\n  Press any key to continue.")
             win.refresh
             
