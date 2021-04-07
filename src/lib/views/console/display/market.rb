@@ -1,5 +1,6 @@
 require "tty-table"
 require "curses"
+require "io/console"
 require_relative "../../SleepKeyPress.rb"
 
 include Curses
@@ -17,7 +18,8 @@ module Views
                     win = Curses.stdscr
                     win.clear
                     sleep 1
-                    
+                    STDIN.iflush
+
                     t = Thread.new do
                         while true
                             sleep 1

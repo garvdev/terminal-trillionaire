@@ -1,4 +1,5 @@
 require "curses"
+require "io/console"
 require_relative "../../SleepKeyPress.rb"
 
 include Curses
@@ -14,9 +15,14 @@ module Views
                     curs_set(0)
                     noecho
                     system 'clear'
+                    
                     win = Curses.stdscr
                     win.clear 
-                    sleep 1 
+                    sleep 1
+                    STDIN.iflush
+
+                    Curses.init_pair(2, Curses::COLOR_WHITE, Curses::COLOR_BLACK)
+                    win.attrset(color_pair(2))
 
                     tutorial = [["The year is 2050...\n",:all,3],
                                 ["High speed automated trading bots have squeezed all the alpha from the market;\n",:all,3],

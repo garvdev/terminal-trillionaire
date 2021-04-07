@@ -14,7 +14,6 @@ module Controllers
                     case user_input(user_status, first_console)
                         when "brief"
                             tutorial
-                            user_status = :old
                         when "market"
                             show_market
                         when "portfolio"
@@ -30,6 +29,7 @@ module Controllers
                             exit
                     end
                     first_console = false
+                    user_status = :old
                 end
             end
         end

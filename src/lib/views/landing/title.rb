@@ -56,6 +56,9 @@ module Views
                     sleep 0.5
                 end
             end
+
+            Curses.init_pair(2, Curses::COLOR_WHITE, Curses::COLOR_BLACK)
+            win.attrset(color_pair(2))
             SleepKeyPress(2,win)
             win.addstr("\n  **Loud Airhorn Noises**")
             win.refresh
