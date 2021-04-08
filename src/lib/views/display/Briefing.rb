@@ -1,6 +1,6 @@
 require "curses"
 require "io/console"
-require_relative "../SleepKeyPress.rb"
+require_relative "../Helpers.rb"
 
 include Curses
 include Views
@@ -38,7 +38,7 @@ module Views
                 tutorial.each do |msg|
                     win.addstr("#{msg[0]}")
                     win.refresh
-                    SleepKeyPress(msg[2],win)
+                    sleep_keypress(msg[2],win)
                 end
 
                 win.addstr("\nPress any key to continue to the console.")

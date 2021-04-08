@@ -1,5 +1,5 @@
 require "curses"
-require_relative "../SleepKeyPress.rb"
+require_relative "../Helpers.rb"
 
 include Curses
 include Views
@@ -32,7 +32,7 @@ module Views
                 win.setpos(1,2)
                 win.addstr("#{msg[0]}")
                 win.refresh
-                SleepKeyPress(msg[2],win)
+                sleep_keypress(msg[2],win)
             end
 
             t = Thread.new do 
@@ -59,10 +59,10 @@ module Views
 
             Curses.init_pair(2, Curses::COLOR_WHITE, Curses::COLOR_BLACK)
             win.attrset(color_pair(2))
-            SleepKeyPress(2,win)
+            sleep_keypress(2,win)
             win.addstr("\n  **Loud Airhorn Noises**")
             win.refresh
-            SleepKeyPress(2,win)
+            sleep_keypress(2,win)
             win.addstr("\n  Press any key to continue.")
             win.refresh
             

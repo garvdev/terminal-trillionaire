@@ -1,5 +1,5 @@
 require_relative "../controllers/Initialisation.rb"
-require_relative "./SleepKeyPress.rb"
+require_relative "./Helpers.rb"
 require 'tty-prompt'
 require "io/console"
 
@@ -18,7 +18,7 @@ module Views
             fjordan.each do |msg|
                 next if msg[1] != :all && msg[1] != user_status
                 puts msg[0]
-                SleepKeyPress(msg[2],STDIN) if first_console == true 
+                sleep_keypress(msg[2],STDIN) if first_console == true 
             end
             
             STDIN.iflush
@@ -55,9 +55,9 @@ module Views
                 return "help"
             else
                 puts "Your command line argument was not recognised.\nPlease refer to the help guide for more information."
-                SleepKeyPress(2,STDIN)
+                sleep_keypress(2,STDIN)
                 puts "Now taking you to the console..."
-                SleepKeyPress(3,STDIN)
+                sleep_keypress(3,STDIN)
                 system 'clear'
             end
         end

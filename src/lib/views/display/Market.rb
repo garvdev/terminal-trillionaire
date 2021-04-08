@@ -1,7 +1,7 @@
 require "tty-table"
 require "curses"
 require "io/console"
-require_relative "../SleepKeyPress.rb"
+require_relative "../Helpers.rb"
 
 include Curses
 
@@ -30,17 +30,17 @@ module Views
 
                         table = []
                         yield.each_pair do |k,v|
-                            table << [k, "   #{'%.2f'%v[:current]}   ", "   #{'%.2f'%v[:day]}   ", "   #{'%.2f'%v[:month]}   ", "   #{'%.2f'%v[:year]}   ", "   #{'%.2f'%v[:decade]}   "]
+                            table << [k, "   #{number_comma('%.2f'%v[:current])} ", "   #{number_comma('%.2f'%v[:day])} ", "   #{number_comma('%.2f'%v[:month])} ", "   #{number_comma('%.2f'%v[:year])} ", "   #{number_comma('%.2f'%v[:decade])} "]
                         end
 
-                        tty_table = TTY::Table.new(header: ["Ticker", "Current", "1D", "1M", "1Y", "10Y"], rows: table)
+                        tty_table = TTY::Table.new(header: [" Ticker ", "Current ", "1D ", "1M ", "1Y ", "10Y "], rows: table)
                     
-                        win.addstr("#{tty_table.render(:unicode, alignment: [:center])}") 
+                        win.addstr("#{tty_table.render(:unicode, alignments: [:center,:right,:right,:right,:right,:right])}") 
                         win.refresh 
                     end
                 end
 
-                SleepKeyPress(5,win)
+                sleep_keypress(5,win)
                 win.addstr("\nPress any key to return to the console.")
                 win.refresh
                 
