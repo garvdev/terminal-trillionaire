@@ -6,29 +6,31 @@ include Controllers::Controller
 
 module Controllers
     module Prompt
-        def prompt(user_status)
+        def prompt(user_status, quick=false)
             first_console = true
             while true
                 system 'clear'
-                case user_input(user_status, first_console)
+                case user_input(user_status, first_console, quick)
                     when "brief"
                         tutorial
                     when "market"
                         show_market
                     when "portfolio"
-                        
+                        p "portfolio" 
                     when "trading"
-                        
+                        p "trading"
                     when "calculator"
-                        
+                        p "calculator"
                     when "help"
-                        
+                        p "help"
                     when "exit"
                         system 'clear'
                         exit
+                    else
                 end
                 first_console = false
                 user_status = :old
+                quick = false
             end
         end
     end
