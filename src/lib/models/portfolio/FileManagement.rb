@@ -39,9 +39,9 @@ module Portfolio
             encrypt('portfolio.yml')
         end
         
-        def newstart(name)
+        def new_start(name)
             @file[:username] = name
-            @file[:trades] << [:CASH, 1_000_000_000, 1]
+            @file[:trades][0] = [:CASH, 1_000_000_000, 1]
             save
         end
         
