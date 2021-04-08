@@ -43,16 +43,22 @@ module Views
 
         def quick_route
             case ARGV[0]
-            when "-m"
+            when /^-m(arket)*/
                 return "market"
-            when "-p"
+            when /^-p(ortfolio)*/
                 return "portfolio"
-            when "-b"
+            when /^-b(uy)*/
                 return "trading" #placeholders
-            when "-s"
+            when /^-s(ell)*/
                 return "trading" #placeholders
-            when "-h"
+            when /^-h(elp)*/
                 return "help"
+            else
+                puts "Your command line argument was not recognised.\nPlease refer to the help guide for more information."
+                SleepKeyPress(2,STDIN)
+                puts "Now taking you to the console..."
+                SleepKeyPress(3,STDIN)
+                system 'clear'
             end
         end
     end
