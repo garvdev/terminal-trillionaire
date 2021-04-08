@@ -6,7 +6,9 @@ include Controllers::Controller
 
 module Controllers
     module Prompt
-        def prompt(user_status, quick=false)
+        def prompt(combined_user, quick=false)
+            user = combined_user[0]
+            user_status = combined_user[1]
             first_console = true
             while true
                 # system 'clear'
@@ -16,7 +18,7 @@ module Controllers
                     when "market"
                         show_market
                     when "portfolio"
-                        show_portfolio
+                        show_portfolio(user)
                     when "trading"
                         p "trading"
                     when "calculator"

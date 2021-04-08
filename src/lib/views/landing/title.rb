@@ -6,7 +6,7 @@ include Views
 
 module Views
     module Landing
-        def title(user, status)
+        def self.title(user, status)
             Curses.init_screen
             Curses.start_color
             system 'clear'

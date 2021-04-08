@@ -20,33 +20,28 @@ module Portfolio
         end
     end
 
-    class Record
-        attr_accessor :history, :user
+    class FileManagement
         include YamlEncryption
+        attr_accessor :file
 
         def initialize
             decrypt('portfolio.yml')
-            @history = YAML.load(File.read('portfolio.yml'))
+            @file = YAML.load(File.read('portfolio.yml'))
             encrypt('portfolio.yml')
-            
-            @user = @history[0]
-            
         rescue SystemCallError
-            @history = []
-            @user = nil
+            @file = {username: nil, trades: []} 
         end
         
         def save
             decrypt('portfolio.yml')
         rescue SystemCallError
-            File.open('portfolio.yml','w') {|file| file.write(@history.to_yaml)}
+            File.open('portfolio.yml','w') {|file| file.write(@file.to_yaml)}
             encrypt('portfolio.yml')
         end
         
-        def new_user(name)
-            @user = name
-            @history << @user
-            @history << [:CASH, 1_000_000_000, 1]
+        def newstart(name)
+            @file[:username] = name
+            @file[:trades] << [:CASH, 1_000_000_000, 1]
             save
         end
         

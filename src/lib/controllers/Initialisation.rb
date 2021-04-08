@@ -1,21 +1,24 @@
-require_relative "../models/portfolio/PortfolioRecord.rb"
+require_relative "../models/portfolio/FileManagement.rb"
 require_relative "../views/landing/Title.rb"
 require_relative "../views/landing/GetUser.rb"
-include Views::Landing
+
+include Views
 
 module Controllers
     module Initialisation
         def load
             system 'clear'
-            portfolio = Portfolio::Record.new
-            portfolio.user.nil? ? (portfolio.new_user(GetUser.name); user_status = :new) : user_status = :old
-            [portfolio.user, user_status]
+            user = Portfolio::FileManagement.new
+            user.file[:username].nil? ? (user.newstart(Landing.get_user); user_status = :new) : user_status = :old
+            [user, user_status]
         end
 
         def initialise(quick=false)
-            user = load
-            title(user[0],user[1]) unless quick == true
-            user[1]
+            combined_user = load
+            user = combined_user[0]
+            user_status = combined_user[1]
+            Landing.title(user.file[:username],user_status) unless quick == true
+            combined_user
         end
     end
 end
