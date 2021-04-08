@@ -10,7 +10,7 @@ module Views
     module Console
         def user_input(user_status, first_console, quick)
             
-            return quickroute if quick == true
+            return quick_route if quick == true
 
             fjordan = [["Hi! I'm Fjordan Belfort, reformed Norwegian Wall Street stockbroker.\n",:all,2],
             ["I'll be your friendly terminal assistant.\n",:all,2],
@@ -41,7 +41,7 @@ module Views
             tty_prompt.select("What can I help you with today?\n", selections, cycle: true, per_page: 10, show_help: :always)
         end
 
-        def quickroute
+        def quick_route
             case ARGV[0]
             when "-m"
                 return "market"
