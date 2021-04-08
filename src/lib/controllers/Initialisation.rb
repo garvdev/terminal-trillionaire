@@ -9,7 +9,7 @@ module Controllers
         def load
             system 'clear'
             user = Portfolio::FileManagement.new
-            user.file[:username].nil? ? (user.newstart(Landing.get_user); user_status = :new) : user_status = :old
+            user.file[:username].nil? ? (user.new_start(Landing.get_user); user_status = :new) : user_status = :old
             [user, user_status]
         end
 

@@ -29,7 +29,8 @@ module Portfolio
             @file = YAML.load(File.read('portfolio.yml'))
             encrypt('portfolio.yml')
         rescue SystemCallError
-            @file = {username: nil, trades: []} 
+            #{username: "user", holdings: {ticker1: [QTY, AVG_COST_BASIS]}, trades: [ticker1, QTY, COST_BASIS]}
+            @file = {username: nil, holdings: {}, trades: []} 
         end
         
         def save
@@ -41,6 +42,7 @@ module Portfolio
         
         def new_start(name)
             @file[:username] = name
+            @file[:holdings][:CASH] = [1_000_000_000, 1]
             @file[:trades][0] = [:CASH, 1_000_000_000, 1]
             save
         end

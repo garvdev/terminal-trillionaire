@@ -18,8 +18,8 @@ module Controllers
         end
         
         def show_portfolio(user)
-            trades = user.file[:trades]
-            p trades                        
+            trades = user.file
+            p trades
         end
     end
 end
