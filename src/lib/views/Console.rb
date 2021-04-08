@@ -1,5 +1,5 @@
-require_relative "../../controllers/Initialisation.rb"
-require_relative "../SleepKeyPress.rb"
+require_relative "../controllers/Initialisation.rb"
+require_relative "./SleepKeyPress.rb"
 require 'tty-prompt'
 require "io/console"
 

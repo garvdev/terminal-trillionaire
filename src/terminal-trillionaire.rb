@@ -1,7 +1,7 @@
 require "./lib/controllers/Initialisation.rb"
-require "./lib/controllers/console/Prompt.rb"
+require "./lib/controllers/Prompt.rb"
 include Controllers::Initialisation
-include Controllers::Console::Prompt
+include Controllers::Prompt
 
 begin
     prompt(initialise)
