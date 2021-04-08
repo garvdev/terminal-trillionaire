@@ -9,14 +9,14 @@ module Controllers
         def prompt(user_status, quick=false)
             first_console = true
             while true
-                system 'clear'
+                # system 'clear'
                 case user_input(user_status, first_console, quick)
                     when "brief"
-                        tutorial
+                        briefing
                     when "market"
                         show_market
                     when "portfolio"
-                        p "portfolio" 
+                        show_portfolio
                     when "trading"
                         p "trading"
                     when "calculator"

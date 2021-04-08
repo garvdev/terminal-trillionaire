@@ -3,10 +3,17 @@ require 'symmetric-encryption'
 
 module Portfolio
     module YamlEncryption
+        SymmetricEncryption.cipher = SymmetricEncryption::Cipher.new(
+            key:         "please dont peek",
+            iv:          "please dont peek",
+            cipher_name: "aes-128-cbc"
+        )
+
         def encrypt(file)
             encrypt = File.read(file)
             SymmetricEncryption::Writer.open(file) {|file| file.write(encrypt)}
         end
+        
         def decrypt(file)
             decrypt = SymmetricEncryption::Reader.open(file) {|file| file.read}
             File.open(file,'w') {|file| file.write(decrypt)}
@@ -16,12 +23,6 @@ module Portfolio
     class Record
         attr_accessor :history, :user
         include YamlEncryption
-
-        SymmetricEncryption.cipher = SymmetricEncryption::Cipher.new(
-            key:         "please dont peek",
-            iv:          "please dont peek",
-            cipher_name: "aes-128-cbc"
-        )
 
         def initialize
             decrypt('portfolio.yml')
@@ -36,6 +37,8 @@ module Portfolio
         end
         
         def save
+            decrypt('portfolio.yml')
+        rescue SystemCallError
             File.open('portfolio.yml','w') {|file| file.write(@history.to_yaml)}
             encrypt('portfolio.yml')
         end

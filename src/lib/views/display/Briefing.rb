@@ -7,7 +7,7 @@ include Views
 
 module Views
     module Display
-        module Tutorial
+        module Briefing
             def self.show
                 Curses.init_screen
                 Curses.start_color
