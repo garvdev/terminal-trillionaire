@@ -15,7 +15,7 @@ module Market
                 #Prepare variables
                 time = Time.now.to_f + value
                 scaled_time = time**3/1e27
-                ticker_val = ticker.sum
+                ticker_val = ticker.to_s.sum
                 
                 #Calculate unique ticker factor
                 factor = (Math.sin(ticker_val**10) + 1) * ticker_val

@@ -25,7 +25,7 @@ module Controllers
         end
 
         def trading(user)
-            user.execute_trade(Trading.get_trade)
+            user.execute_trade(Trading.get_trade(user))
             user.save
         end
     end
