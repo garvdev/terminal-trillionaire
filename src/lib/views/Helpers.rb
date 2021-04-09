@@ -6,6 +6,8 @@ module Views
     end
 
     def number_comma(number)
+       number = '%.2f'%number
        number.to_s.gsub(/(\d)(?=(\d{3})+(?!\d))/, '\1,')
+       # Thanks to https://github.com/tararico/yukichi for the regex!
     end
 end

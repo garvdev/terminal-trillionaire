@@ -1,4 +1,4 @@
-require_relative "../models/portfolio/FileManagement.rb"
+require_relative "../models/portfolio/FileRecord.rb"
 require_relative "../views/landing/Title.rb"
 require_relative "../views/landing/GetUser.rb"
 
@@ -8,7 +8,7 @@ module Controllers
     module Initialisation
         def load
             system 'clear'
-            user = Portfolio::FileManagement.new
+            user = Portfolio::FileRecord.new
             user.file[:username].nil? ? (user.new_start(Landing.get_user); user_status = :new) : user_status = :old
             [user, user_status]
         end

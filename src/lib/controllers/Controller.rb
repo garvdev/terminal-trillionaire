@@ -1,7 +1,7 @@
 require_relative "../models/market/Catalogue.rb"
 require_relative "../views/display/Market.rb"
 require_relative "../views/display/Briefing.rb"
-
+require_relative "../views/display/Portfolio.rb"
 
 module Controllers
     module Controller
@@ -18,8 +18,9 @@ module Controllers
         end
         
         def show_portfolio(user)
-            trades = user.file
-            p trades
+            Portfolio.show(user) do
+                ::Market::Catalogue.price_list
+            end
         end
     end
 end

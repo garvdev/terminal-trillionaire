@@ -21,16 +21,14 @@ module Views
                 t = Thread.new do
                     while true
                         sleep 1
-                        x = 0
-                        y = 0
-                        win.setpos(y, x)
+                        win.setpos(0,0)
 
                         Curses.init_pair(2, Curses::COLOR_WHITE, Curses::COLOR_BLACK)
                         win.attrset(color_pair(2))
 
                         table = []
                         yield.each_pair do |k,v|
-                            table << [k, "   #{number_comma('%.2f'%v[:current])} ", "   #{number_comma('%.2f'%v[:day])} ", "   #{number_comma('%.2f'%v[:month])} ", "   #{number_comma('%.2f'%v[:year])} ", "   #{number_comma('%.2f'%v[:decade])} "]
+                            table << [k, "   #{number_comma(v[:current])} ", "   #{number_comma(v[:day])} ", "   #{number_comma(v[:month])} ", "   #{number_comma(v[:year])} ", "   #{number_comma(v[:decade])} "]
                         end
 
                         tty_table = TTY::Table.new(header: [" Ticker ", "Current ", "1D ", "1M ", "1Y ", "10Y "], rows: table)
