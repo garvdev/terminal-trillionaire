@@ -11,7 +11,6 @@ module Controllers
             user_status = combined_user[1]
             first_console = true
             while true
-                # system 'clear'
                 case user_input(user_status, first_console, quick)
                     when "brief"
                         briefing
@@ -20,7 +19,7 @@ module Controllers
                     when "portfolio"
                         show_portfolio(user)
                     when "trading"
-                        p "trading"
+                        trading
                     when "calculator"
                         p "calculator"
                     when "help"

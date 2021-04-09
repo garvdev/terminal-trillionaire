@@ -32,7 +32,7 @@ module Views
             selections = [
                 {name: "- View Live Market Feed", value: "market"},
                 {name: "- Analyse Portfolio", value: "portfolio"},
-                {name: "- Execute Trades", value: "trading", disabled: "(out of order)"},
+                {name: "- Execute Trades", value: "trading"}, 
                 {name: "- Calculate Scenarios", value: "calculator", disabled: "(out of order)"},
                 {name: "- Revisit Briefing", value: "brief"},
                 {name: "- Help", value: "help", disabled: "(out of order)"},

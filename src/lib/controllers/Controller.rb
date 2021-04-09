@@ -2,25 +2,30 @@ require_relative "../models/market/Catalogue.rb"
 require_relative "../views/display/Market.rb"
 require_relative "../views/display/Briefing.rb"
 require_relative "../views/display/Portfolio.rb"
+require_relative "../views/Trading.rb"
 
 module Controllers
     module Controller
-        include Views::Display
+        include Views
         
         def briefing
-            Briefing.show
+            Display::Briefing.show
         end
         
         def show_market
-            Market.show do
+            Display::Market.show do
                 ::Market::Catalogue.price_list
             end
         end
         
         def show_portfolio(user)
-            Portfolio.show(user) do
+            Display::Portfolio.show(user) do
                 ::Market::Catalogue.price_list
             end
+        end
+
+        def trading
+            Trading.prompts
         end
     end
 end
