@@ -317,3 +317,27 @@ SecurityPricing
 Finished in 10.13 seconds (files took 0.35316 seconds to load)
 5 examples, 0 failures
 
+
+An error occurred while loading ./SecurityPricing_spec.rb.
+Failure/Error: require_relative "../models/market/SecurityPricing.rb"
+
+LoadError:
+  cannot load such file -- /Users/garveychan/Git/terminal-trillionaire/src/models/market/SecurityPricing.rb
+# ./SecurityPricing_spec.rb:2:in `require_relative'
+# ./SecurityPricing_spec.rb:2:in `<top (required)>'
+No examples found.
+
+Finished in 0.00005 seconds (files took 0.40282 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
+
+
+SecurityPricing
+  should return 5 key value pairs for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return floats for each timestamp (current, 1 day ago, 1 month ago, 1 year ago, 1 decade ago)
+  should return 10000 sets of security prices across all timestamps in less than 1 second
+  should return prices with a distinct growth curve over extended periods of time
+  should return prices fluctuating within bands of -2% and 2% each second
+
+Finished in 10.15 seconds (files took 0.41479 seconds to load)
+5 examples, 0 failures
+

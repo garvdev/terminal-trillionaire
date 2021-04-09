@@ -24,8 +24,9 @@ module Controllers
             end
         end
 
-        def trading
-            Trading.prompts
+        def trading(user)
+            user.execute_trade(Trading.get_trade)
+            user.save
         end
     end
 end

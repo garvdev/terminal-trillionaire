@@ -1,8 +1,8 @@
 module Views
     module Trading
-        def self.prompts
+        def self.get_trade
             system 'clear'
-            
+            [:CASH,100,1] #test trade
         end
 
         def quick_trade

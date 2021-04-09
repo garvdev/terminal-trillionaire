@@ -1,5 +1,5 @@
-require "./lib/controllers/Initialisation.rb"
-require "./lib/controllers/Prompt.rb"
+require "./app/controllers/Initialisation.rb"
+require "./app/controllers/Prompt.rb"
 include Controllers::Initialisation
 include Controllers::Prompt
 
