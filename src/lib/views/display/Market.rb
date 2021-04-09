@@ -28,12 +28,14 @@ module Views
 
                         table = []
                         yield.each_pair do |k,v|
+                            next if k == :CASH
                             table << [k, "   #{number_comma(v[:current])} ", "   #{number_comma(v[:day])} ", "   #{number_comma(v[:month])} ", "   #{number_comma(v[:year])} ", "   #{number_comma(v[:decade])} "]
                         end
 
                         tty_table = TTY::Table.new(header: [" Ticker ", "Current ", "1D ", "1M ", "1Y ", "10Y "], rows: table)
                     
-                        win.addstr("#{tty_table.render(:unicode, alignments: [:center,:right,:right,:right,:right,:right])}") 
+                        win.addstr("Live Market Feed - NASDAK Composite")
+                        win.addstr("\n#{tty_table.render(:unicode, alignments: [:center,:right,:right,:right,:right,:right])}") 
                         win.refresh 
                     end
                 end
