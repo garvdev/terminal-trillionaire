@@ -39,14 +39,22 @@ module Portfolio
             File.open('portfolio.yml','w') {|file| file.write(@file.to_yaml)}
             encrypt('portfolio.yml')
         end
-        
+
         def new_start(name)
             @file[:username] = name
-            @file[:holdings][:CASH] = [1_000_000_000, 1_000_000_000]
+            @file[:holdings][:CASH] = [100000, 100000]
             @file[:holdings][:PEAR] = [5000, 10000] #testing
             @file[:holdings][:CHLL] = [10000, 50000] #testing
-            @file[:holdings][:EDSN] = [50, 100000] #testing
-            @file[:trades][0] = [:CASH, 1_000_000_000, 1_000_000_000]
+            @file[:holdings][:YMMY] = [500, 1234200] #testing
+            @file[:holdings][:EXCL] = [235, 1000230] #testing
+            @file[:holdings][:WATR] = [87435, 34532] #testing
+            @file[:holdings][:TEEM] = [4843, 23485] #testing
+            @file[:holdings][:CODE] = [25236, 10] #testing
+            @file[:holdings][:LAMP] = [6234, 456456] #testing
+            @file[:holdings][:SOLA] = [62352, 4564555] #testing
+            @file[:holdings][:TEXT] = [78567, 856745] #testing
+            @file[:holdings][:EDSN] = [45345, 245321423] #testing
+            @file[:trades][0] = [:CASH, 10, 10]
             @file[:trades][1] = [:PEAR, 5000, 2] #testing
             @file[:trades][2] = [:CHLL, 10000, 5] #testing
             @file[:trades][3] = [:EDSN, 50, 2000] #testing

@@ -1,4 +1,5 @@
 require "tty-table"
+require "tty-pie"
 require "curses"
 require "io/console"
 require_relative "../Helpers.rb"
@@ -32,6 +33,7 @@ module Views
                         current_prices = {}
                         table = []
                         summary = [[]]
+                        pie_dict = ["-","+","=","~","<","@","#","$","%","&",">","o"]
                         
                         user.file[:holdings].each_pair do |k,v|
                             table << [k,v[0],v[1],v[1]/v[0]]
@@ -50,25 +52,32 @@ module Views
                         summary[0][0] = number_comma(table.map{|x| x[5]}.sum)
                         summary[0][1] = number_comma(table.map{|x| x[6]}.sum)
                         
+                        pie_data = []
+                        table.each.with_index do |x,i|
+                            pie_data << {name: x[0], value: x[5], fill: pie_dict[i]} 
+                        end
+
                         table.each do |x|
                             x.map! {|y| y.is_a?(Symbol) ? y : number_comma(y)}
                         end
-
-                        # win.addstr("#{totals}#{table}#{current_prices}") #testing
-                        # win.refresh #testing
                         
                         table_main = TTY::Table.new(header: [" Security ", " Quantity ", " Total Cost Basis ", " Avg Cost Basis ", " Current Price ", " Total Value ", " Profit/Loss "], rows: table)
                         table_summary = TTY::Table.new(header: [" Portfolio Value "," Portfolio P&L "], rows: summary)
+                        pie_chart = TTY::Pie.new(data: pie_data, radius: 15)
 
-                        win.addstr("#{table_main.render(:unicode, alignments: [:center,:right,:right,:right,:right,:right,:right,:right])}") 
+                        win.addstr("Portfolio Analysis") 
+                        win.addstr("\n#{table_main.render(:unicode, alignments: [:center,:right,:right,:right,:right,:right,:right,:right])}") 
+                        win.addstr("\n\n\nPortfolio Breakdown") 
+                        win.addstr("\n#{pie_chart.render}")
+                        win.addstr("(Note - You may wish to adjust your terminal font if the chart is distorted.)") 
+                        win.addstr("\n\n\nPortfolio Summary") 
                         win.addstr("\n#{table_summary.render(:unicode, alignments: [:right,:right])}") 
-
                         win.refresh
                     end
                 end
 
                 sleep_keypress(5,win)
-                win.addstr("\nPress any key to return to the console.")
+                win.addstr("\n\nPress any key to return to the console.")
                 win.refresh
                 
                 win.getch

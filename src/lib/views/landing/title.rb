@@ -63,7 +63,10 @@ module Views
             win.addstr("\n  **Loud Airhorn Noises**")
             win.refresh
             sleep_keypress(2,win)
-            win.addstr("\n  Press any key to continue.")
+            win.addstr("\n  Note - this simulator is best experienced in fullscreen.")
+            win.refresh
+            sleep_keypress(2,win)
+            win.addstr("\n  Press any key to continue.                              ")
             win.refresh
             
             win.getch
