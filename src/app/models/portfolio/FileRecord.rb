@@ -4,8 +4,8 @@ require 'symmetric-encryption'
 module Portfolio
     module YamlEncryption
         SymmetricEncryption.cipher = SymmetricEncryption::Cipher.new(
-            key:         "please dont peek",
-            iv:          "please dont peek",
+            key:    "please dont peek",
+            iv:     "please dont peek",
             cipher_name: "aes-128-cbc"
         )
 
