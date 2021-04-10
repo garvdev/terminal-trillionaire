@@ -1,6 +1,6 @@
 require_relative "../controllers/Initialisation.rb"
 require_relative "./Helpers.rb"
-require 'tty-prompt'
+require "tty-prompt"
 require "io/console"
 
 include Controllers::Initialisation
@@ -33,8 +33,8 @@ module Views
                 {name: "- View Live Market Feed", value: "market"},
                 {name: "- Analyse Portfolio", value: "portfolio"},
                 {name: "- Execute Trades", value: "trading"}, 
-                {name: "- Calculate Scenarios", value: "calculator", disabled: "(out of order)"},
-                {name: "- Revisit Briefing", value: "brief"},
+                {name: "- List Trades", value: "log", disabled: "(out of order)"},
+                {name: "- Briefing", value: "brief"},
                 {name: "- Help", value: "help", disabled: "(out of order)"},
                 {name: "- Exit", value: "exit"} 
             ]
@@ -47,8 +47,12 @@ module Views
                 return "market"
             when /^-p(ortfolio)*/
                 return "portfolio"
-            when /^-t(rade)*/
-                return "trading"
+            when /^-b(uy)*/
+                # return "buy"
+            when /^-s(ell)*/
+                # return "sell"
+            when /^-l(og)*/
+                return "log"
             when /^-h(elp)*/
                 return "help"
             else

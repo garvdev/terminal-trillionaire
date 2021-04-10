@@ -68,7 +68,7 @@ module Views
                                                              "         Current Price ",
                                                              "           Total Value ",
                                                              "           Profit/Loss "], rows: table)
-                        table_summary = TTY::Table.new(header: [" Portfolio Value "," Portfolio P&L "], rows: summary)
+                        table_summary = TTY::Table.new(header: [" Potential Value "," Potential P&L "], rows: summary)
                         pie_chart = TTY::Pie.new(data: pie_data, radius: 15)
 
                         win.addstr("Portfolio Analysis") 

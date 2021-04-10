@@ -19,9 +19,9 @@ module Controllers
                     when "portfolio"
                         show_portfolio(user)
                     when "trading"
-                        trading(user)
-                    when "calculator"
-                        p "calculator"
+                        trading_platform(user)
+                    when "log"
+                        p "log"
                     when "help"
                         p "help"
                     when "exit"

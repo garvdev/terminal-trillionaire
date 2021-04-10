@@ -21,12 +21,10 @@ module Controllers
             Display::Portfolio.show(user) { ::Market::Catalogue.price_list }
         end
 
-        def trading(user)
+        def trading_platform(user)
             Trading.get_trade(user) do |trade|
                 user.execute_trade(trade)
-                user.save
             end
-            puts user.file[:trades]
         end
     end
 end
