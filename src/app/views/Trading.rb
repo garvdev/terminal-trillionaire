@@ -49,6 +49,7 @@ module Views
                         arg_ticker = ARGV[1].strip.upcase.to_sym
                         Catalogue::TICKERS[1..Catalogue::TICKERS.length].include?(arg_ticker) ? (trade_ticker = arg_ticker) : raise
 
+                    # return to start of platform if ticker can't be found
                     rescue
                         puts "Quick trade arguments not recognised. Returning to platform..."
                         sleep_keypress(10, STDIN)
@@ -57,7 +58,7 @@ module Views
                 else
                     # greeting - show current portfolio if it exists
                     puts "Welcome to the trading platform, #{user.file[:username]}!"
-                    (puts "Your portfolio holdings are as follows:"; puts tty_table.render(:unicode, alignment: [:center, :right])) unless holdings == {}
+                    (puts "Your portfolio holdings are as follows:"; puts tty_table.render(:unicode, alignment: [:center])) unless holdings == {}
 
                     # true => buy order, false => sell order, nil => return to console
                     trade_type = tty_prompt.select("You currently have #{("$"+number_comma(cash)).light_green} to play with.\nWill you be intending to make a buy order or a sell order?\n", {Buy: :buy, Sell: :sell, Exit: :exit}, cycle: true, show_help: :always)
