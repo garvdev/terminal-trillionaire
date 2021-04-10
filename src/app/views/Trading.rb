@@ -13,8 +13,6 @@ include Market
 module Views
     module Trading
         def self.get_trade(user, quick)
-            # quick_trade if ARGV[0] =~ /^-t(rade)*/
-
             while true
                 # formatting
                 system 'clear'
@@ -35,7 +33,27 @@ module Views
                 
                 # apply quick routine if command line arguments specify quick trade
                 if quick == true
-                    
+                    quick = false
+                    begin
+                        # assign trade type based on command line argument
+                        case ARGV[0]
+                        when /^-b(uy)*/
+                            trade_type = :buy
+                        when /^-s(ell)*/
+                            trade_type = :sell
+                        else
+                            raise
+                        end
+
+                        # assign trade ticker based on command line argument, raise error if it doesn't exist.
+                        arg_ticker = ARGV[1].strip.upcase.to_sym
+                        Catalogue::TICKERS[1..Catalogue::TICKERS.length].include?(arg_ticker) ? (trade_ticker = arg_ticker) : raise
+
+                    rescue
+                        puts "Quick trade arguments not recognised. Returning to platform..."
+                        sleep_keypress(10, STDIN)
+                    next
+                    end
                 else
                     # greeting - show current portfolio if it exists
                     puts "Welcome to the trading platform, #{user.file[:username]}!"
@@ -48,20 +66,20 @@ module Views
                     break if trade_type == :exit
 
                     # prompt for security selection
-                    trade_ticker = tty_prompt.select("\n#{trade_type == :buy ? "Time to put your money where your mouth is!" : "Never hang on to a loser!"}\nWhich security would you like to transact with today?\n", Catalogue::TICKERS[1..Catalogue::TICKERS.length], cycle: true, show_help: :always)
+                    trade_ticker = tty_prompt.select("\n#{trade_type == :buy ? "Time to put your money where your mouth is!" : "Never hang on to a loser!"}\nWhich security would you like to transact with today?\n", Catalogue::TICKERS[1..Catalogue::TICKERS.length], cycle: true, show_help: :always); puts
                 end
 
                 # fetch and lock selected security price
                 locked_price = SecurityPricing.prices(trade_ticker)[:current]
-                puts "\nGreat choice! Our brokers have locked in a unit price of #{("$"+number_comma(locked_price)).light_green} for you."
+                puts "Great choice! Our brokers have locked in a unit price of #{("$"+number_comma(locked_price)).light_green} for you."
                 
                 # display trade information based on selected criteria - return to top if insufficient cash/holdings
                 case trade_type
                 when :buy
-                    (puts "\nHowever, it appears that you have insufficient cash to fund this purchase.\nConsider liquidating some of your existing holdings if you wish to make further purchases."; sleep_keypress(10,STDIN); next) if cash < locked_price
+                    (puts "\nHowever, it appears that you have insufficient cash to fund this purchase.\nConsider liquidating some of your existing holdings if you wish to make further purchases."; sleep_keypress(10, STDIN); next) if cash < locked_price
                     puts "With your current cash balance, you can purchase a maximum of #{(number_comma((cash/locked_price).floor.to_i)).light_cyan} shares of #{trade_ticker.to_s.light_blue}."
                 when :sell
-                    (puts "\nHowever, it appears that you do not have any existing holdings of the selected security.\nPlease try again with a different selection."; sleep_keypress(10,STDIN); next) unless holdings.flatten.include?(trade_ticker)
+                    (puts "\nHowever, it appears that you do not have any existing holdings of the selected security.\nPlease try again with a different selection."; sleep_keypress(10, STDIN); next) unless holdings.flatten.include?(trade_ticker)
                     puts "With your existing #{trade_ticker.to_s.light_blue} holdings, you can sell a maximum of #{number_comma(holdings[trade_ticker]).light_cyan} units."
                 end
 
