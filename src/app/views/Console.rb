@@ -9,7 +9,7 @@ include Views
 module Views
     module Console
         def user_input(user_status, first_console, quick)
-            
+            system 'clear' 
             return quick_route if quick == true
 
             fjordan = [["Hi! I'm Fjordan Belfort, reformed Norwegian Wall Street stockbroker.\n",:all,2],
