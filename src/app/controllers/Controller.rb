@@ -13,20 +13,20 @@ module Controllers
         end
         
         def show_market
-            Display::Market.show do
-                ::Market::Catalogue.price_list
-            end
+            Display::Market.show { ::Market::Catalogue.price_list }
+            
         end
         
         def show_portfolio(user)
-            Display::Portfolio.show(user) do
-                ::Market::Catalogue.price_list
-            end
+            Display::Portfolio.show(user) { ::Market::Catalogue.price_list }
         end
 
         def trading(user)
-            user.execute_trade(Trading.get_trade(user))
-            user.save
+            Trading.get_trade(user) do |trade|
+                user.execute_trade(trade)
+                user.save
+            end
+            puts user.file[:trades]
         end
     end
 end

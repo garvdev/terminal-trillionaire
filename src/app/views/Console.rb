@@ -47,10 +47,8 @@ module Views
                 return "market"
             when /^-p(ortfolio)*/
                 return "portfolio"
-            when /^-b(uy)*/
-                return "trading" #placeholders
-            when /^-s(ell)*/
-                return "trading" #placeholders
+            when /^-t(rade)*/
+                return "trading"
             when /^-h(elp)*/
                 return "help"
             else
