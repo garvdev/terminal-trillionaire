@@ -19,7 +19,7 @@ module Controllers
                     when "portfolio"
                         show_portfolio(user)
                     when "trading"
-                        trading_platform(user)
+                        trading_platform(user, quick)
                     when "log"
                         p "log"
                     when "help"
