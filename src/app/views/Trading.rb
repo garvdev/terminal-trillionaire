@@ -16,33 +16,42 @@ module Views
             # quick_trade if ARGV[0] =~ /^-t(rade)*/
 
             while true
+                # formatting
                 system 'clear'
                 STDIN.iflush
                 
+                # fetch cash balance
                 cash = user.file[:holdings][:CASH][0]
-
+                
                 # holdings structure derived from model - {:Ticker => QTY, etc.}, excluding cash
                 holdings = {}
                 user.file[:holdings].each_pair {|k,v| (holdings[k] = v[0].to_i) unless k == :CASH}
-
+                
                 # initialise formatting tools
                 tty_cursor = TTY::Cursor
                 tty_bar = TTY::ProgressBar.new("Executing Trade [:bar]", total: 20, bar_format: :block)
                 tty_prompt = TTY::Prompt.new
                 tty_table = TTY::Table.new(header: [" Security ", " Quantity "], rows: holdings.to_a.map{|x| [x[0],number_comma(x[1])]})
-
-                # greeting - show current portfolio if it exists
-                puts "Welcome to the trading platform, #{user.file[:username]}!"
-                (puts "Your portfolio holdings are as follows:"; puts tty_table.render(:unicode, alignment: [:center, :right])) unless holdings == {}
-
-                # true => buy order, false => sell order, nil => return to console
-                trade_type = tty_prompt.select("You currently have #{("$"+number_comma(cash)).light_green} to play with.\nWill you be intending to make a buy order or a sell order?\n", {Buy: :buy, Sell: :sell, Exit: :exit}, cycle: true, show_help: :always)
                 
-                # return to console
-                break if trade_type == :exit
+                # apply quick routine if command line arguments specify quick trade
+                if quick == true
+                    
+                else
+                    # greeting - show current portfolio if it exists
+                    puts "Welcome to the trading platform, #{user.file[:username]}!"
+                    (puts "Your portfolio holdings are as follows:"; puts tty_table.render(:unicode, alignment: [:center, :right])) unless holdings == {}
 
-                # prompt for security selection and lock current price
-                trade_ticker = tty_prompt.select("\n#{trade_type == :buy ? "Time to put your money where your mouth is!" : "Never hang on to a loser!"}\nWhich security would you like to transact with today?\n", Catalogue::TICKERS[1..Catalogue::TICKERS.length], cycle: true, show_help: :always)
+                    # true => buy order, false => sell order, nil => return to console
+                    trade_type = tty_prompt.select("You currently have #{("$"+number_comma(cash)).light_green} to play with.\nWill you be intending to make a buy order or a sell order?\n", {Buy: :buy, Sell: :sell, Exit: :exit}, cycle: true, show_help: :always)
+                    
+                    # return to console
+                    break if trade_type == :exit
+
+                    # prompt for security selection
+                    trade_ticker = tty_prompt.select("\n#{trade_type == :buy ? "Time to put your money where your mouth is!" : "Never hang on to a loser!"}\nWhich security would you like to transact with today?\n", Catalogue::TICKERS[1..Catalogue::TICKERS.length], cycle: true, show_help: :always)
+                end
+
+                # fetch and lock selected security price
                 locked_price = SecurityPricing.prices(trade_ticker)[:current]
                 puts "\nGreat choice! Our brokers have locked in a unit price of #{("$"+number_comma(locked_price)).light_green} for you."
                 
@@ -81,7 +90,7 @@ module Views
             trade_qty
         end
 
-        # post-trade prompt for return to top or console
+        # post-trade prompt for returning to top or console
         def self.final_prompt(tty_prompt)
             STDIN.iflush
             puts; tty_prompt.yes?("Would you like to execute further trades?") {|q| q.suffix "y/n"} ? true : false

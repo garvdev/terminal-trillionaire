@@ -25,7 +25,7 @@ module Controllers
 
         # trading platform - trades yielded to block to be saved in portfolio file
         def trading_platform(user,quick)
-            Trading.get_trade(user,quick) {|trade| user.execute_trade(trade)}
+            Trading.get_trade(user, quick) {|trade| user.execute_trade(trade)}
         end
     end
 end

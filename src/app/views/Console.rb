@@ -8,9 +8,8 @@ include Views
 
 module Views
     module Console
-        def user_input(user_status, first_console, quick)
+        def user_input(user_status, first_console)
             system 'clear' 
-            return quick_route if quick == true
 
             fjordan = [["Hi! I'm Fjordan Belfort, reformed Norwegian Wall Street stockbroker.\n",:all,2],
             ["I'll be your friendly terminal assistant.\n",:all,2],
@@ -39,29 +38,6 @@ module Views
                 {name: "- Exit", value: "exit"} 
             ]
             tty_prompt.select("What can I help you with today?\n", selections, cycle: true, per_page: 10, show_help: :always)
-        end
-
-        def quick_route
-            case ARGV[0]
-            when /^-m(arket)*/
-                return "market"
-            when /^-p(ortfolio)*/
-                return "portfolio"
-            when /^-b(uy)*/
-                # return "buy"
-            when /^-s(ell)*/
-                # return "sell"
-            when /^-l(og)*/
-                return "log"
-            when /^-h(elp)*/
-                return "help"
-            else
-                puts "Your command line argument was not recognised.\nPlease refer to the help guide for more information."
-                sleep_keypress(2,STDIN)
-                puts "Now taking you to the console..."
-                sleep_keypress(3,STDIN)
-                system 'clear'
-            end
         end
     end
 end
