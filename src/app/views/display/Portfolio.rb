@@ -61,7 +61,13 @@ module Views
                             x.map! {|y| y.is_a?(Symbol) ? y : number_comma(y)}
                         end
                         
-                        table_main = TTY::Table.new(header: [" Security ", " Quantity ", " Total Cost Basis ", " Avg Cost Basis ", " Current Price ", " Total Value ", " Profit/Loss "], rows: table)
+                        table_main = TTY::Table.new(header: ["Security", 
+                                                             "         Quantity ",
+                                                             " Total Cost Basis ",
+                                                             "   Avg Cost Basis ",
+                                                             "    Current Price ",
+                                                             "      Total Value ",
+                                                             "      Profit/Loss "], rows: table)
                         table_summary = TTY::Table.new(header: [" Portfolio Value "," Portfolio P&L "], rows: summary)
                         pie_chart = TTY::Pie.new(data: pie_data, radius: 15)
 

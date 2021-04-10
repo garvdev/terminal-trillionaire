@@ -14,15 +14,22 @@ module Views
             tty_prompt = TTY::Prompt.new
             
             # true = buy, false = sell
-            trade_type = tty_prompt.select("Welcome to the trading platform, #{user.file[:username]}!\nYou currently have #{("$"+number_comma(user.file[:holdings][:CASH])).colorize(:light_blue)} to play with.\nWill you be intending to make a buy order or a sell order?\n", {Buy: true, Sell: false}, show_help: :always)
+            cash = user.file[:holdings][:CASH][0]
+            trade_type = tty_prompt.select("Welcome to the trading platform, #{user.file[:username]}!\nYou currently have #{("$"+number_comma(cash)).colorize(:light_blue)} to play with.\nWill you be intending to make a buy order or a sell order?\n", {Buy: true, Sell: false}, show_help: :always)
             trade_ticker = tty_prompt.select("#{trade_type ? "Time to put your money where your mouth is!" : "Never hang on to a loser!"}\nWhich security would you like to transact with today?\n", Catalogue::TICKERS[1..Catalogue::TICKERS.length], cycle: true, show_help: :always)
             locked_price = SecurityPricing.prices(trade_ticker)[:current]
-            p locked_price
-            # trade_qty = STDIN.gets.strip
+
+            if trade_type == true
+            puts "Great choice! Our brokers have locked in a price of #{("$"+number_comma(locked_price)).colorize(:light_blue)} for you."
+            puts "With your current cash balance, you can purchase a maximum of #{(number_comma((cash/locked_price).floor.to_i)).colorize(:light_blue)} shares of #{(trade_ticker.to_s).colorize(:green)}."
+            puts "How much #{(trade_ticker.to_s).colorize(:green)} would you like to order today?"
+            trade_qty = STDIN.gets.strip.to_i
+            p trade_qty
+            end
             
             
             # p trade_type; p trade_ticker
-            [:CASH,1000000,1] # test trade
+            [:CASH,10000.12,1] # test trade
             # insufficient cash/stock logic
             # LAST IN FIRST OUT - sell behaviour - traverse trade history
         end
