@@ -65,6 +65,7 @@ DEPENDENCIES
   curses (~> 1.4)
   rspec (~> 3.10)
   symmetric-encryption (~> 4.3)
+  tty-cursor (~> 0.7.1)
   tty-pie (~> 0.4.0)
   tty-progressbar (~> 0.18.2)
   tty-prompt (~> 0.23.0)

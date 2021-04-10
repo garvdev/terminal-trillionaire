@@ -23,8 +23,7 @@ module Views
             puts "Great choice! Our brokers have locked in a price of #{("$"+number_comma(locked_price)).colorize(:light_blue)} for you."
             puts "With your current cash balance, you can purchase a maximum of #{(number_comma((cash/locked_price).floor.to_i)).colorize(:light_blue)} shares of #{(trade_ticker.to_s).colorize(:green)}."
             puts "How much #{(trade_ticker.to_s).colorize(:green)} would you like to order today?"
-            trade_qty = STDIN.gets.strip.to_i
-            p trade_qty
+            trade_qty = Input.get("int")
             end
             
             
