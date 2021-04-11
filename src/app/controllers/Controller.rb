@@ -2,6 +2,7 @@ require_relative "../models/market/Catalogue.rb"
 require_relative "../views/display/Market.rb"
 require_relative "../views/display/Briefing.rb"
 require_relative "../views/display/Portfolio.rb"
+require_relative "../views/display/TradeLog.rb"
 require_relative "../views/Trading.rb"
 
 module Controllers
@@ -26,6 +27,10 @@ module Controllers
         # trading platform - trades yielded to block to be saved in portfolio file
         def trading_platform(user,quick)
             Trading.get_trade(user, quick) {|trade| user.execute_trade(trade)}
+        end
+
+        def show_log(user)
+            Display::TradeLog.show(user)
         end
     end
 end

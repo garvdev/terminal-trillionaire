@@ -32,9 +32,9 @@ module Views
                 {name: "- View Live Market Feed", value: "market"},
                 {name: "- Analyse Portfolio", value: "portfolio"},
                 {name: "- Execute Trades", value: "trading"}, 
-                {name: "- List Trades", value: "log", disabled: "(out of order)"},
+                {name: "- List Trades", value: "log"},
                 {name: "- Briefing", value: "brief"},
-                {name: "- Help", value: "help", disabled: "(out of order)"},
+                {name: "- Help", value: "help"},
                 {name: "- Exit", value: "exit"} 
             ]
             tty_prompt.select("What can I help you with today?\n", selections, cycle: true, per_page: 10, show_help: :always)

@@ -22,7 +22,7 @@ module Controllers
                     when "trading"
                         trading_platform(user, quick)
                     when "log"
-                        p "log"
+                        show_log(user)
                     when "help"
                         p "help"
                     when "exit"
