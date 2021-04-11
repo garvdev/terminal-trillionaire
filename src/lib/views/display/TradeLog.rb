@@ -8,6 +8,7 @@ module Views
     module Display
         module TradeLog
             def self.show(user)
+                system 'clear'
                 tty_cursor = TTY::Cursor
                 tty_cursor.invisible do
                     trades = []
