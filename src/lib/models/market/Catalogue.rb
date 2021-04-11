@@ -2,9 +2,8 @@ require_relative "./SecurityItem.rb"
 
 module Market
     module Catalogue
-        TICKERS = [:CASH,:PEAR,:EDSN,:CHLL,:YMMY,:EXCL,:WATR,:LAMP,:TEEM,:SOLA,:CODE,:TEXT]
+        TICKERS = [:CASH,:PEAR,:EDSN,:CHLL,:GRVY,:EXCL,:WATR,:DSGN,:SCNT,:SOLA,:CODE,:MUSC]
         # Pie chart characters maxed at 12 -> tickers must be maxed at 12.
-        # :FODR,:MUSC,:BIKE,:SCNT,:MAKE,:DSGN,:ANML,:LOOP,:SLAM]
 
         def self.price_list
             price_list = {}

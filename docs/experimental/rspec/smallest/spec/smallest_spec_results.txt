@@ -1,0 +1,7 @@
+
+smallest
+[32m  should return the smallest number in the array[0m
+
+Finished in 0.00494 seconds (files took 0.20815 seconds to load)
+[32m1 example, 0 failures[0m
+

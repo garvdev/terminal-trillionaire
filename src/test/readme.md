@@ -1,1 +1,0 @@
-This folder contains scripts written for the purpose of experimenting with ruby functionality during the research phase of the development process. Rspec testing can be found in `../spec`.
