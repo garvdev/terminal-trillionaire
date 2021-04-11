@@ -192,4 +192,5 @@ The first two columns of the board listed **Research** topics and **Questions** 
 #### Attributions
 
 ASCII Title Art - https://patorjk.com/software/taag/
+
 Number Formatting Regex - https://github.com/tararico/yukichi
