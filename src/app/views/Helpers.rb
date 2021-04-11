@@ -14,7 +14,6 @@ module Views
     end
 
     module Input
-        
         class IntegerError < StandardError
             def initialize
                 puts "Hang on, that doesn't look like a valid integer, please try again."
