@@ -3,6 +3,7 @@ require_relative "../views/display/Market.rb"
 require_relative "../views/display/Briefing.rb"
 require_relative "../views/display/Portfolio.rb"
 require_relative "../views/display/TradeLog.rb"
+require_relative "../views/display/Help.rb"
 require_relative "../views/Trading.rb"
 
 module Controllers
@@ -29,8 +30,14 @@ module Controllers
             Trading.get_trade(user, quick) {|trade| user.execute_trade(trade)}
         end
 
+        # show trade log - all trades ever executed in the portfolio
         def show_log(user)
             Display::TradeLog.show(user)
+        end
+
+        # show application help
+        def show_help
+            Display::Help.show
         end
     end
 end

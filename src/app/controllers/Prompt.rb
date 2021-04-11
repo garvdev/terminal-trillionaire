@@ -24,7 +24,7 @@ module Controllers
                     when "log"
                         show_log(user)
                     when "help"
-                        p "help"
+                        show_help
                     when "exit"
                         system 'clear'
                         exit
