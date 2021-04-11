@@ -25,7 +25,7 @@ The User Input Error Handling module defines Error classes for two types of inpu
 
 The following tests must be conducted to ensure that the model runs reliably:
 
-- Various input tests (edge cases)
-    - Given designated argument methods, the method must either return the input if validated or raise an error.
-- Limit test
-    - The method must exit the application if the max limit of attempts, passed in as an argument (default - 10), has been reached.
+- Integer input tests (edge cases)
+    - Given specified argument - integer, the method must either return the input if validated by the **integer** regex or raise an error and exit otherwise.
+- String input tests (edge cases)
+    - Given specified argument - string, the method must either return the input if validated by the **string** regex or raise an error and exit otherwise.

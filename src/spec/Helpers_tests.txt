@@ -1,0 +1,1106 @@
+
+Helpers
+Hang on, that doesn't look like a valid integer, please try again.
+Hang on, that doesn't look like a valid integer, please try again.
+[2K[1G[1A[2K[1G[1A[2K[1GHang on, that doesn't look like a valid integer, please try again.
+[2K[1G[1A[2K[1G[1A[2K[1GHang on, that doesn't look like a valid integer, please try again.
+[2K[1G[1A[2K[1G[1A[2K[1GHang on, that doesn't look like a valid integer, please try again.
+[2K[1G[1A[2K[1G[1A[2K[1GHang on, that doesn't look like a valid integer, please try again.
+[2K[1G[1A[2K[1G[1A[2K[1GHang on, that doesn't look like a valid integer, please try again.
+[2K[1G[1A[2K[1G[1A[2K[1G  should return validated inputs when asking for integers (FAILED - 1)
+  should return validated inputs when asking for strings
+  should exit the application if the specified max limit of retries has been reached
+
+Failures:
+
+  1) Helpers should return validated inputs when asking for integers
+     Failure/Error: allow(Input.get("int")).to receive(input).and_return(input)
+
+     NameError:
+       undefined local variable or method `input' for #<RSpec::ExampleGroups::Helpers "should return validated inputs when asking for integers" (./Helpers_spec.rb:6)>
+     # ./Helpers_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+Finished in 11.89 seconds (files took 0.6036 seconds to load)
+3 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:6 # Helpers should return validated inputs when asking for integers
+
+
+Helpers
+  should return validated inputs when asking for integers (FAILED - 1)
+  should return validated inputs when asking for strings
+  should exit the application if the specified max limit of retries has been reached
+
+Failures:
+
+  1) Helpers should return validated inputs when asking for integers
+     Failure/Error: allow(Input.get("int")).to receive(input).and_return(input)
+
+     ArgumentError:
+       Cannot proxy frozen objects, rspec-mocks relies on proxies for method stubbing and expectations.
+     # ./Helpers_spec.rb:8:in `block (2 levels) in <top (required)>'
+
+Finished in 1.22 seconds (files took 0.3376 seconds to load)
+3 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:6 # Helpers should return validated inputs when asking for integers
+
+
+Helpers
+  should return validated inputs when asking for integers (FAILED - 1)
+  should return validated inputs when asking for strings
+  should exit the application if the specified max limit of retries has been reached
+
+Failures:
+
+  1) Helpers should return validated inputs when asking for integers
+     Failure/Error: allow(Input.get("int")).to receive(:gets).and_return(input)
+
+     ArgumentError:
+       Cannot proxy frozen objects, rspec-mocks relies on proxies for method stubbing and expectations.
+     # ./Helpers_spec.rb:8:in `block (2 levels) in <top (required)>'
+
+Finished in 1.43 seconds (files took 0.56758 seconds to load)
+3 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:6 # Helpers should return validated inputs when asking for integers
+
+
+Helpers
+  should return validated inputs when asking for integers (FAILED - 1)
+  should return validated inputs when asking for strings
+  should exit the application if the specified max limit of retries has been reached
+
+Failures:
+
+  1) Helpers should return validated inputs when asking for integers
+     Failure/Error: allow(Input.get("int")).to receive(:gets).and_return(123)
+
+     ArgumentError:
+       Cannot proxy frozen objects, rspec-mocks relies on proxies for method stubbing and expectations.
+     # ./Helpers_spec.rb:8:in `block (2 levels) in <top (required)>'
+
+Finished in 1.38 seconds (files took 0.35398 seconds to load)
+3 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:6 # Helpers should return validated inputs when asking for integers
+
+
+Helpers
+  should return validated inputs when asking for integers (FAILED - 1)
+  should return validated inputs when asking for strings
+  should exit the application if the specified max limit of retries has been reached
+
+Failures:
+
+  1) Helpers should return validated inputs when asking for integers
+     Failure/Error: allow(Input.get("int")).to receive(123).and_return(123)
+
+     ArgumentError:
+       Cannot proxy frozen objects, rspec-mocks relies on proxies for method stubbing and expectations.
+     # ./Helpers_spec.rb:8:in `block (2 levels) in <top (required)>'
+
+Finished in 1.38 seconds (files took 0.42493 seconds to load)
+3 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:6 # Helpers should return validated inputs when asking for integers
+
+
+Helpers
+Hang on, that doesn't look like a valid integer, please try again.
+
+Helpers
+[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+
+Finished in 3.02 seconds (files took 0.44554 seconds to load)
+1 example, 0 failures
+
+
+Helpers
+  should return validated inputs when asking for integers
+  should return validated inputs when asking for strings
+  should exit the application if the specified max limit of retries has been reached
+
+Finished in 0.01505 seconds (files took 0.2074 seconds to load)
+3 examples, 0 failures
+
+
+Helpers
+[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+
+Finished in 3.01 seconds (files took 0.2416 seconds to load)
+1 example, 0 failures
+
+
+Helpers
+  should return validated inputs when asking for integers (FAILED - 1)
+  should return validated inputs when asking for strings
+  should exit the application if the specified max limit of retries has been reached
+
+Failures:
+
+  1) Helpers should return validated inputs when asking for integers
+     Failure/Error: expect(test).to eq(123)
+
+       expected: 123
+            got: "123"
+
+       (compared using ==)
+     # ./Helpers_spec.rb:10:in `block (2 levels) in <top (required)>'
+
+Finished in 0.06507 seconds (files took 0.20369 seconds to load)
+3 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:6 # Helpers should return validated inputs when asking for integers
+
+
+Helpers
+[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+
+Finished in 3.01 seconds (files took 0.20612 seconds to load)
+1 example, 0 failures
+
+
+Helpers
+  should return validated inputs when asking for integers
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+
+Finished in 3.02 seconds (files took 0.25035 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when asking for integers
+  should return validated inputs when asking for strings (FAILED - 1)
+  should exit the application if the specified max limit of retries has been reached
+
+Failures:
+
+  1) Helpers should return validated inputs when asking for strings
+     Failure/Error: expect(Input.get).not_to raise_error
+       expected no Exception but was not given a block
+     # ./Helpers_spec.rb:14:in `block (2 levels) in <top (required)>'
+
+Finished in 0.04589 seconds (files took 0.20608 seconds to load)
+3 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:11 # Helpers should return validated inputs when asking for strings
+
+
+Helpers
+  should return validated inputs when asking for integers
+  should return validated inputs when asking for strings
+  should exit the application if the specified max limit of retries has been reached
+
+Finished in 0.01436 seconds (files took 0.20503 seconds to load)
+3 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when asking for integers
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+  should return validated inputs when asking for strings
+  should exit the application if the specified max limit of retries has been reached
+
+Finished in 3.02 seconds (files took 0.23903 seconds to load)
+3 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when asking for integers
+  should return validated inputs when asking for strings (FAILED - 1)
+  should exit the application if the specified max limit of retries has been reached
+
+Failures:
+
+  1) Helpers should return validated inputs when asking for strings
+     Failure/Error: expect{Input.get}.to raise_error(StringError)
+
+     NameError:
+       uninitialized constant StringError
+       Did you mean?  ScriptError
+     # ./Helpers_spec.rb:16:in `block (2 levels) in <top (required)>'
+
+Finished in 0.01745 seconds (files took 0.21598 seconds to load)
+3 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:11 # Helpers should return validated inputs when asking for strings
+
+
+Helpers
+  should return validated inputs when asking for integers
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+
+Finished in 3.03 seconds (files took 0.22288 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when asking for integers
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+  should return validated inputs when asking for strings (FAILED - 1)
+  should exit the application if the specified max limit of retries has been reached
+
+Failures:
+
+  1) Helpers should return validated inputs when asking for strings
+     Failure/Error: expect{Input.get}.to raise_error(an_instance_of(StandardError))
+
+       expected Exception with an instance of StandardError, got #<SystemExit: exit> with backtrace:
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:45:in `exit'
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:45:in `rescue in get'
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:31:in `get'
+         # ./Helpers_spec.rb:17:in `block (3 levels) in <top (required)>'
+         # ./Helpers_spec.rb:17:in `block (2 levels) in <top (required)>'
+     # ./Helpers_spec.rb:17:in `block (2 levels) in <top (required)>'
+
+Finished in 3.04 seconds (files took 0.20276 seconds to load)
+3 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:11 # Helpers should return validated inputs when asking for strings
+
+
+Helpers
+  should return validated inputs when asking for integers
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+  should return validated inputs when asking for strings
+  should exit the application if the specified max limit of retries has been reached
+
+Finished in 3.03 seconds (files took 0.52984 seconds to load)
+3 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when asking for integers
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+  should return validated inputs when asking for strings
+  should exit the application if the specified max limit of retries has been reached
+
+Finished in 3.02 seconds (files took 0.21902 seconds to load)
+3 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when asking for integers
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+  should return validated inputs when asking for strings
+  should exit the application if the specified max limit of retries has been reached
+
+Finished in 3.02 seconds (files took 0.21325 seconds to load)
+3 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 9.03 seconds (files took 0.35099 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Too many attempts. Exiting application...
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+Too many attempts. Exiting application...
+Too many attempts. Exiting application...
+  should return validated inputs when receiving strings with no special characters
+
+1 deprecation warning total
+
+Finished in 9.04 seconds (files took 0.44472 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters (FAILED - 1)
+
+Failures:
+
+  1) Helpers should return validated inputs when receiving strings with no special characters
+     Failure/Error:
+       config.before(:each) do
+           allow($stdout).to receive(:print)
+       end
+
+     NameError:
+       undefined local variable or method `config' for #<RSpec::ExampleGroups::Helpers "should return validated inputs when receiving strings with no special characters" (./Helpers_spec.rb:11)>
+     # ./Helpers_spec.rb:12:in `block (2 levels) in <top (required)>'
+
+Finished in 0.00222 seconds (files took 0.32666 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:11 # Helpers should return validated inputs when receiving strings with no special characters
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters (FAILED - 1)
+
+Failures:
+
+  1) Helpers should return validated inputs when receiving strings with no special characters
+     Failure/Error:
+       before(:each) do
+           allow($stdout).to receive(:print)
+       end
+
+       `before` is not available from within an example (e.g. an `it` block) or from constructs that run in the scope of an example (e.g. `before`, `let`, etc). It is only available on an example group (e.g. a `describe` or `context` block).
+     # ./Helpers_spec.rb:12:in `block (2 levels) in <top (required)>'
+
+Finished in 0.00446 seconds (files took 0.20686 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:11 # Helpers should return validated inputs when receiving strings with no special characters
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters (FAILED - 1)
+
+Failures:
+
+  1) Helpers should return validated inputs when receiving strings with no special characters
+     Failure/Error:
+       before do
+           $stdout.stub(:print)
+        end
+
+       `before` is not available from within an example (e.g. an `it` block) or from constructs that run in the scope of an example (e.g. `before`, `let`, etc). It is only available on an example group (e.g. a `describe` or `context` block).
+     # ./Helpers_spec.rb:12:in `block (2 levels) in <top (required)>'
+
+Finished in 0.00232 seconds (files took 0.49409 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:11 # Helpers should return validated inputs when receiving strings with no special characters
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+  should return validated inputs when receiving strings with no special characters
+
+1 deprecation warning total
+
+Finished in 9.04 seconds (files took 0.21452 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+Hold up, those don't look like proper words. Please try again without special characters.
+Hold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GHold up, those don't look like proper words. Please try again without special characters.
+[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1G[2K[1G[1A[2K[1G[1A[2K[1GToo many attempts. Exiting application...
+  should return validated inputs when receiving strings with no special characters
+
+1 deprecation warning total
+
+Finished in 9.03 seconds (files took 0.33025 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 9.03 seconds (files took 0.44207 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 6.02 seconds (files took 0.21575 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters (FAILED - 1)
+
+Failures:
+
+  1) Helpers should return validated inputs when receiving strings with no special characters
+     Failure/Error: expect{Input.get}.to raise_error(SystemExit)
+
+       expected SystemExit, got #<NameError: uninitialized constant Views::Timeout> with backtrace:
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:7:in `rescue in sleep_keypress'
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:4:in `sleep_keypress'
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:45:in `rescue in get'
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:31:in `get'
+         # ./Helpers_spec.rb:28:in `block (3 levels) in <top (required)>'
+         # ./Helpers_spec.rb:28:in `block (2 levels) in <top (required)>'
+     # ./Helpers_spec.rb:28:in `block (2 levels) in <top (required)>'
+
+Finished in 0.04891 seconds (files took 0.21258 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:18 # Helpers should return validated inputs when receiving strings with no special characters
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters (FAILED - 1)
+
+Failures:
+
+  1) Helpers should return validated inputs when receiving strings with no special characters
+     Failure/Error: expect{Input.get}.to raise_error(SystemExit)
+
+       expected SystemExit, got #<NameError: uninitialized constant Views::Timeout> with backtrace:
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:7:in `rescue in sleep_keypress'
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:4:in `sleep_keypress'
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:45:in `rescue in get'
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:31:in `get'
+         # ./Helpers_spec.rb:28:in `block (3 levels) in <top (required)>'
+         # ./Helpers_spec.rb:28:in `block (2 levels) in <top (required)>'
+     # ./Helpers_spec.rb:28:in `block (2 levels) in <top (required)>'
+
+Finished in 0.04163 seconds (files took 0.20629 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:18 # Helpers should return validated inputs when receiving strings with no special characters
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 3.03 seconds (files took 0.22554 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 0.01498 seconds (files took 0.2034 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters (FAILED - 1)
+  should return validated inputs when receiving strings with no special characters (FAILED - 2)
+
+Failures:
+
+  1) Helpers should return validated inputs when receiving integers with no special characters
+     Failure/Error: allow_any_instance_of(Object).to receive(:sleep)
+       The use of doubles or partial doubles from rspec-mocks outside of the per-test lifecycle is not supported.
+     # ./Helpers_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+  2) Helpers should return validated inputs when receiving strings with no special characters
+     Failure/Error: allow_any_instance_of(Object).to receive(:sleep)
+       The use of doubles or partial doubles from rspec-mocks outside of the per-test lifecycle is not supported.
+     # ./Helpers_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+Finished in 0.00691 seconds (files took 0.30325 seconds to load)
+2 examples, 2 failures
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:14 # Helpers should return validated inputs when receiving integers with no special characters
+rspec ./Helpers_spec.rb:19 # Helpers should return validated inputs when receiving strings with no special characters
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters (FAILED - 1)
+  should return validated inputs when receiving strings with no special characters (FAILED - 2)
+
+Failures:
+
+  1) Helpers should return validated inputs when receiving integers with no special characters
+     Failure/Error: allow(Object).to receive(:sleep)
+       The use of doubles or partial doubles from rspec-mocks outside of the per-test lifecycle is not supported.
+     # ./Helpers_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+  2) Helpers should return validated inputs when receiving strings with no special characters
+     Failure/Error: allow(Object).to receive(:sleep)
+       The use of doubles or partial doubles from rspec-mocks outside of the per-test lifecycle is not supported.
+     # ./Helpers_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+Finished in 0.01546 seconds (files took 0.36731 seconds to load)
+2 examples, 2 failures
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:14 # Helpers should return validated inputs when receiving integers with no special characters
+rspec ./Helpers_spec.rb:19 # Helpers should return validated inputs when receiving strings with no special characters
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters (FAILED - 1)
+  should return validated inputs when receiving strings with no special characters (FAILED - 2)
+
+Failures:
+
+  1) Helpers should return validated inputs when receiving integers with no special characters
+     Failure/Error: allow(Input.get).to receive(:sleep)
+       The use of doubles or partial doubles from rspec-mocks outside of the per-test lifecycle is not supported.
+     # ./Helpers_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+  2) Helpers should return validated inputs when receiving strings with no special characters
+     Failure/Error: allow(Input.get).to receive(:sleep)
+       The use of doubles or partial doubles from rspec-mocks outside of the per-test lifecycle is not supported.
+     # ./Helpers_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+Finished in 4.02 seconds (files took 0.2065 seconds to load)
+2 examples, 2 failures
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:14 # Helpers should return validated inputs when receiving integers with no special characters
+rspec ./Helpers_spec.rb:19 # Helpers should return validated inputs when receiving strings with no special characters
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters (FAILED - 1)
+  should return validated inputs when receiving strings with no special characters (FAILED - 2)
+
+Failures:
+
+  1) Helpers should return validated inputs when receiving integers with no special characters
+     Failure/Error: allow($stdout).to receive(:sleep)
+       The use of doubles or partial doubles from rspec-mocks outside of the per-test lifecycle is not supported.
+     # ./Helpers_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+  2) Helpers should return validated inputs when receiving strings with no special characters
+     Failure/Error: allow($stdout).to receive(:sleep)
+       The use of doubles or partial doubles from rspec-mocks outside of the per-test lifecycle is not supported.
+     # ./Helpers_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+Finished in 0.01236 seconds (files took 0.20606 seconds to load)
+2 examples, 2 failures
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:14 # Helpers should return validated inputs when receiving integers with no special characters
+rspec ./Helpers_spec.rb:19 # Helpers should return validated inputs when receiving strings with no special characters
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters (FAILED - 1)
+  should return validated inputs when receiving strings with no special characters (FAILED - 2)
+
+Failures:
+
+  1) Helpers should return validated inputs when receiving integers with no special characters
+     Failure/Error: allow(Kernel).to receive(:sleep)
+       The use of doubles or partial doubles from rspec-mocks outside of the per-test lifecycle is not supported.
+     # ./Helpers_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+  2) Helpers should return validated inputs when receiving strings with no special characters
+     Failure/Error: allow(Kernel).to receive(:sleep)
+       The use of doubles or partial doubles from rspec-mocks outside of the per-test lifecycle is not supported.
+     # ./Helpers_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+Finished in 0.01065 seconds (files took 0.22985 seconds to load)
+2 examples, 2 failures
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:14 # Helpers should return validated inputs when receiving integers with no special characters
+rspec ./Helpers_spec.rb:19 # Helpers should return validated inputs when receiving strings with no special characters
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters (FAILED - 1)
+  should return validated inputs when receiving strings with no special characters (FAILED - 2)
+
+Failures:
+
+  1) Helpers should return validated inputs when receiving integers with no special characters
+     Failure/Error: Acceleration.speed_up(10)
+
+     NameError:
+       uninitialized constant Acceleration
+     # ./Helpers_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+  2) Helpers should return validated inputs when receiving strings with no special characters
+     Failure/Error: Acceleration.speed_up(10)
+
+     NameError:
+       uninitialized constant Acceleration
+     # ./Helpers_spec.rb:6:in `block (2 levels) in <top (required)>'
+
+Finished in 0.00215 seconds (files took 0.29149 seconds to load)
+2 examples, 2 failures
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:14 # Helpers should return validated inputs when receiving integers with no special characters
+rspec ./Helpers_spec.rb:19 # Helpers should return validated inputs when receiving strings with no special characters
+
+
+An error occurred while loading ./Helpers_spec.rb.
+Failure/Error: mattr_accessor :sleep_scale
+
+NoMethodError:
+  undefined method `mattr_accessor' for Acceleration:Module
+  Did you mean?  attr_accessor
+# ./Helpers_spec.rb:5:in `<module:Acceleration>'
+# ./Helpers_spec.rb:4:in `<top (required)>'
+No examples found.
+
+Finished in 0.00005 seconds (files took 0.26147 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
+
+
+An error occurred while loading ./Helpers_spec.rb.
+Failure/Error: self.sleep_scale = 1
+
+NoMethodError:
+  undefined method `sleep_scale=' for Acceleration:Module
+# ./Helpers_spec.rb:12:in `reset'
+# ./Helpers_spec.rb:15:in `<module:Acceleration>'
+# ./Helpers_spec.rb:4:in `<top (required)>'
+No examples found.
+
+Finished in 0.00004 seconds (files took 0.16945 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
+
+
+An error occurred while loading ./Helpers_spec.rb.
+Failure/Error: self.sleep_scale = 1
+
+NoMethodError:
+  undefined method `sleep_scale=' for Acceleration:Module
+# ./Helpers_spec.rb:12:in `reset'
+# ./Helpers_spec.rb:15:in `<module:Acceleration>'
+# ./Helpers_spec.rb:4:in `<top (required)>'
+No examples found.
+
+Finished in 0.00004 seconds (files took 0.26854 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters (FAILED - 1)
+
+Failures:
+
+  1) Helpers should return validated inputs when receiving strings with no special characters
+     Failure/Error: expect{Input.get}.to raise_error(SystemExit)
+
+       expected SystemExit, got #<NoMethodError: undefined method `sleep_scale' for Acceleration:Module
+       Did you mean?  sleep_keypress> with backtrace:
+         # ./Helpers_spec.rb:22:in `sleep'
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:45:in `rescue in get'
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:31:in `get'
+         # ./Helpers_spec.rb:51:in `block (3 levels) in <top (required)>'
+         # ./Helpers_spec.rb:51:in `block (2 levels) in <top (required)>'
+     # ./Helpers_spec.rb:51:in `block (2 levels) in <top (required)>'
+
+Finished in 0.05076 seconds (files took 0.22508 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:41 # Helpers should return validated inputs when receiving strings with no special characters
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters (FAILED - 1)
+  should return validated inputs when receiving strings with no special characters
+
+Failures:
+
+  1) Helpers should return validated inputs when receiving integers with no special characters
+     Failure/Error: expect{Input.get}.not_to raise_error
+
+       expected no Exception, got #<SystemExit: exit> with backtrace:
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:45:in `exit'
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:45:in `rescue in get'
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:31:in `get'
+         # ./Helpers_spec.rb:15:in `block (3 levels) in <top (required)>'
+         # ./Helpers_spec.rb:15:in `block (2 levels) in <top (required)>'
+     # ./Helpers_spec.rb:15:in `block (2 levels) in <top (required)>'
+
+Finished in 0.05468 seconds (files took 0.32821 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:13 # Helpers should return validated inputs when receiving integers with no special characters
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters (FAILED - 1)
+  should return validated inputs when receiving strings with no special characters
+
+Failures:
+
+  1) Helpers should return validated inputs when receiving integers with no special characters
+     Failure/Error: expect{Input.get}.to raise_error(SystemExit)
+       expected SystemExit but nothing was raised
+     # ./Helpers_spec.rb:22:in `block (2 levels) in <top (required)>'
+
+Finished in 0.05896 seconds (files took 0.50299 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:13 # Helpers should return validated inputs when receiving integers with no special characters
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters (FAILED - 1)
+  should return validated inputs when receiving strings with no special characters
+
+Failures:
+
+  1) Helpers should return validated inputs when receiving integers with no special characters
+     Failure/Error: expect{Input.get("int")}.not_to raise_error
+
+       expected no Exception, got #<SystemExit: exit> with backtrace:
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:45:in `exit'
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:45:in `rescue in get'
+         # /Users/garveychan/Git/terminal-trillionaire/src/app/views/Helpers.rb:31:in `get'
+         # ./Helpers_spec.rb:15:in `block (3 levels) in <top (required)>'
+         # ./Helpers_spec.rb:15:in `block (2 levels) in <top (required)>'
+     # ./Helpers_spec.rb:15:in `block (2 levels) in <top (required)>'
+
+Finished in 0.04891 seconds (files took 0.30413 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:13 # Helpers should return validated inputs when receiving integers with no special characters
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters (FAILED - 1)
+  should return validated inputs when receiving strings with no special characters
+
+Failures:
+
+  1) Helpers should return validated inputs when receiving integers with no special characters
+     Failure/Error: expect{Input.get("int")}.to raise_error(SystemExit)
+       expected SystemExit but nothing was raised
+     # ./Helpers_spec.rb:22:in `block (2 levels) in <top (required)>'
+
+Finished in 0.06111 seconds (files took 0.29303 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:13 # Helpers should return validated inputs when receiving integers with no special characters
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 0.01707 seconds (files took 0.20438 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 0.01663 seconds (files took 0.20331 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 0.01682 seconds (files took 0.21367 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 0.01692 seconds (files took 0.2055 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 0.01677 seconds (files took 0.2063 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 0.01672 seconds (files took 0.20424 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 0.01657 seconds (files took 0.21225 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 0.01692 seconds (files took 0.20475 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 24.05 seconds (files took 0.3093 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters (FAILED - 1)
+
+Failures:
+
+  1) Helpers should return validated inputs when receiving strings with no special characters
+     Failure/Error: expect{Input.get}.to raise_error(SystemExit)
+       expected SystemExit but nothing was raised
+     # ./Helpers_spec.rb:50:in `block (2 levels) in <top (required)>'
+
+Finished in 24.07 seconds (files took 0.20543 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./Helpers_spec.rb:35 # Helpers should return validated inputs when receiving strings with no special characters
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 27.05 seconds (files took 0.20263 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 27.05 seconds (files took 0.44186 seconds to load)
+2 examples, 0 failures
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 27.06 seconds (files took 0.20988 seconds to load)
+2 examples, 0 failures
+
