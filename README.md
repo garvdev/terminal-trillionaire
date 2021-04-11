@@ -79,7 +79,7 @@ The majority of **errors** will likely occur during the user input sections of t
 
 #### Implementation Plan
 
-The development of this application will be split into few distinct stages based on the **Agile** approach. As I am still learning various concepts in Ruby and the Terminal, I figure that an iterative and flexible approach will allow me to maximise my return on effort as I expect to be changing my requirements as I discover new functionality and the limitations of the tools available to me. Noting the 1.5 week timeline, this assignment represents Minimum Viable Product with additional features to be implemented at later dates.
+The development of this application will be split into few distinct stages based on the **Agile** approach. As I am still learning various concepts in Ruby and the Terminal, I figure that an iterative and flexible approach will allow me to maximise my return on effort as I expect to be changing my requirements as I discover new functionality and the limitations of the tools available to me. Noting the 1.5 week timeline, this assignment represents a Minimum Viable Product with additional features to be implemented at later dates.
 
 For the Agile approach, I have defined several user/client stories to help determine my requirements for the application:
 
