@@ -92,10 +92,6 @@ module Views
             end
         end
 
-        def quick_trade
-            # quick route to trade section in control flow
-        end
-
         # fetch desired trade quantity and return to main method
         def self.fetch_quantity(type, tty_cursor, holdings, trade_ticker, cash, locked_price)
             i = 0

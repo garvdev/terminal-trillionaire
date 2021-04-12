@@ -11,7 +11,9 @@
 ## Software Development Plan
 
 [GitHub Link](https://github.com/garvdev/terminal-trillionaire)
+
 [Alternate GitHub Link](https://github.com/garveycodes/terminal-trillionaire)
+
 [Trello Link](https://trello.com/invite/b/rfHyAJYC/f01d37f27eb56c3b75a78ee1277d61cb/t1a3-terminal-application)
 
 #### Background / Purpose / Scope
@@ -35,6 +37,7 @@ The main features of **Terminal Trillionaire** are as follows:
 The market view will provide a real-time rapidly updating catalogue of securities and their corresponding prices. The securities will be identified by their **ticker** on the stock exchange, followed by a series of prices at various timestamps so that the user can identify the current price and perform trend analyses to inform their decision making. The backbone of this feed will be a mathematical model which can be called upon rapidly to generate simulated prices based on the current time. By leveraging the `Time` object to calculate prices in real-time, it effectively becomes a pseudo-database for consistent prices that each terminal can drawn upon, enabling a single market environment across all machines running this application. Users can therefore compete fairly against each other without any communications link.
 
 ![Pricing Algorithm](./docs/pricing-algorithm.png)
+
 *Note that this algorithm is very simplistic and assumes continuously linear growth of the underlying asset.*
 *Further details can be found in the experimental section of `./docs/`.*
 
@@ -59,6 +62,7 @@ Additionally, a **help section** will be provided from within the application to
 The majority of **errors** will likely occur during the user input sections of the application. A large portion of these will be mitigated by the use of **prompts**, limiting the user input to the options provided. In stages where this can't be utilised, such as username input and trade quantity queries, errors will be handled gracefully with all **edge cases** considered. Robust validation methods involving **regular expressions** and **whitespace removal** will ensure that the application only accepts input which satisfies **syntactical** and **logical** criteria. Any issues will cause the application to raise exceptions and request remediated input.
 
 ![User Prompts](./docs/user-prompts.jpeg)
+
 *User Prompt Brainstorming*
 
 <hr>
@@ -75,7 +79,7 @@ The majority of **errors** will likely occur during the user input sections of t
 
 #### Implementation Plan
 
-The development of this application will be split into few distinct stages based on the **Agile** approach. As I am still learning various concepts in Ruby and the Terminal, I figure that an iterative and flexible approach will allow me to maximise my return on effort as I expect to be changing my requirements as I discover new functionality and the limitations of the tools available to me. Noting the 1.5 week timeline, this assignment represents Minimum Viable Product with additional features to be implemented at later dates.
+The development of this application will be split into few distinct stages based on the **Agile** approach. As I am still learning various concepts in Ruby and the Terminal, I figure that an iterative and flexible approach will allow me to maximise my return on effort as I expect to be changing my requirements as I discover new functionality and the limitations of the tools available to me. Noting the 1.5 week timeline, this assignment represents a Minimum Viable Product with additional features to be implemented at later dates.
 
 For the Agile approach, I have defined several user/client stories to help determine my requirements for the application:
 
@@ -188,4 +192,5 @@ The first two columns of the board listed **Research** topics and **Questions** 
 #### Attributions
 
 ASCII Title Art - https://patorjk.com/software/taag/
+
 Number Formatting Regex - https://github.com/tararico/yukichi
