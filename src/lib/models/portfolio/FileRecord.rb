@@ -28,14 +28,14 @@ module Portfolio
             decrypt('portfolio.yml')
             @file = YAML.load(File.read('portfolio.yml'))
             encrypt('portfolio.yml')
-        rescue OpenSSL::Cipher::CipherError
+            # Portfolio storage structure - {username: "user", holdings: {Ticker: [QTY, TOTAL_COST]}, trades: [Ticker, QTY, COST_BASIS_PER_SHARE]}
+        rescue SystemCallError # no file found, initialize empty portfolio.
+            @file = {username: nil, holdings: {}, trades: []} 
+        rescue
             puts "Sorry, it appears your portfolio.yml file was corrupted. Please delete/backup your existing file before trying again."
             puts "Exiting program..."
             sleep 3
             exit
-        rescue SystemCallError # no file found, initialize empty portfolio.
-            # Portfolio storage structure - {username: "user", holdings: {Ticker: [QTY, TOTAL_COST]}, trades: [Ticker, QTY, COST_BASIS_PER_SHARE]}
-            @file = {username: nil, holdings: {}, trades: []} 
         end
         
         def save
