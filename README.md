@@ -14,7 +14,7 @@
 
 [Alternate GitHub Link](https://github.com/garveycodes/terminal-trillionaire)
 
-[Trello Link](https://trello.com/invite/b/rfHyAJYC/f01d37f27eb56c3b75a78ee1277d61cb/t1a3-terminal-application)
+[Trello Link](https://trello.com/b/rfHyAJYC/)
 
 #### Background / Purpose / Scope
 
