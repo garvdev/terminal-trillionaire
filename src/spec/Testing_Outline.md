@@ -13,7 +13,7 @@ The following tests must be conducted to ensure that the model runs reliably and
 - Format test
     - The method must return key value pairs in a consistent Symbol: Float format for processing in Views.
 - Benchmark test
-    - The method must perform be able to perform calculations at scale, i.e. a large number such as 10,000 per second - corresponding to the number of securities available on the market and its requirements for 'real-time' price updates.
+    - The method must be able to perform calculations at scale, i.e. a large number such as 10,000 per second - corresponding to the number of securities available on the market and its requirements for 'real-time' price updates.
 - Growth test
     - The model must simulate security prices steadily growing over time by testing each timestamp result against its predecessor.
 - Volatility test
@@ -21,7 +21,7 @@ The following tests must be conducted to ensure that the model runs reliably and
 
 ##### Test 2 - User Input Error Handling
 
-The User Input Error Handling module defines Error classes for two types of input - **Integers** and **Strings**. The method `Input.get` will prompt the user to provide input and verify against a specified regex, raising the respective error if it doesn't comply. It will also exit the application if there are too many incorrect attempts (a limit which can be specified) - to dissuade misuse of the features.
+The User Input Error Handling module defines Error classes for two types of input - **Integers** and **Strings**. The method `Input.get` will prompt the user to provide input and verify against a specified regex, raising the respective error if it doesn't comply. It will also exit the application if there are too many incorrect attempts (a limit which can be specified) - to dissuade from misuse of the features.
 
 The following tests must be conducted to ensure that the model runs reliably:
 
