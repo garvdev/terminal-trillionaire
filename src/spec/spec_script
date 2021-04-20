@@ -1,4 +1,4 @@
 # !/usr/bin/sh
 
-rspec ./SecurityPricing_spec.rb --format documentation | tee -a SecurityPricing_tests.txt
-rspec ./Helpers_spec.rb --format documentation | tee -a Helpers_tests.txt
+rspec ./security_pricing_spec.rb --format documentation | tee -a security_pricing_tests.txt
+rspec ./helpers_spec.rb --format documentation | tee -a helpers_tests.txt

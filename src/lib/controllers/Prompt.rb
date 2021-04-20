@@ -1,5 +1,5 @@
-require_relative "./Controller.rb"
-require_relative "../views/Console.rb"
+require_relative "./controller.rb"
+require_relative "../views/console.rb"
 
 include Views::Console
 include Controllers::Controller

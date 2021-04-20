@@ -1,5 +1,5 @@
-require_relative "../controllers/Initialisation.rb"
-require_relative "./Helpers.rb"
+require_relative "../controllers/initialisation.rb"
+require_relative "./helpers.rb"
 require "tty-prompt"
 require "io/console"
 

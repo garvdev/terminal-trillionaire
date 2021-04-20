@@ -4,9 +4,9 @@ require "tty-table"
 require "tty-prompt"
 require "tty-cursor"
 require "tty-progressbar"
-require_relative "./Helpers.rb"
-require_relative "../models/market/Catalogue.rb"
-require_relative "../models/market/SecurityPricing.rb"
+require_relative "./helpers.rb"
+require_relative "../models/market/catalogue.rb"
+require_relative "../models/market/security_pricing.rb"
 
 include Market
 

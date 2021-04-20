@@ -1,4 +1,4 @@
-require_relative "./SecurityPricing"
+require_relative "./security_pricing.rb"
 
 class SecurityItem
     attr_reader :ticker, :prices

@@ -1,4 +1,4 @@
-require_relative "./SecurityItem.rb"
+require_relative "./security_item.rb"
 
 module Market
     module Catalogue

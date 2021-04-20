@@ -1,6 +1,6 @@
-require_relative "../models/portfolio/FileRecord.rb"
-require_relative "../views/landing/Title.rb"
-require_relative "../views/landing/GetUser.rb"
+require_relative "../models/portfolio/file_record.rb"
+require_relative "../views/landing/title.rb"
+require_relative "../views/landing/get_user.rb"
 
 include Views
 

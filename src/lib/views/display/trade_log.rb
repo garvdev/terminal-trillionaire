@@ -2,7 +2,7 @@ require "colorize"
 require "tty-table"
 require "tty-cursor"
 require "io/console"
-require_relative "../Helpers.rb"
+require_relative "../helpers.rb"
 
 module Views
     module Display

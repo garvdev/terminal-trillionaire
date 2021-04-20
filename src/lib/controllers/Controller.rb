@@ -1,10 +1,10 @@
-require_relative "../models/market/Catalogue.rb"
-require_relative "../views/display/Market.rb"
-require_relative "../views/display/Briefing.rb"
-require_relative "../views/display/Portfolio.rb"
-require_relative "../views/display/TradeLog.rb"
-require_relative "../views/display/Help.rb"
-require_relative "../views/Trading.rb"
+require_relative "../models/market/catalogue.rb"
+require_relative "../views/display/market.rb"
+require_relative "../views/display/briefing.rb"
+require_relative "../views/display/portfolio.rb"
+require_relative "../views/display/trade_log.rb"
+require_relative "../views/display/help.rb"
+require_relative "../views/trading.rb"
 
 module Controllers
     module Controller

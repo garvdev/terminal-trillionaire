@@ -1,4 +1,4 @@
-require_relative "../app/views/Helpers.rb"
+require_relative "../app/views/helpers.rb"
 include Views
 
 describe "Helpers" do

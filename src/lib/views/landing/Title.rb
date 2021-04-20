@@ -1,5 +1,5 @@
 require "curses"
-require_relative "../Helpers.rb"
+require_relative "../helpers.rb"
 
 include Curses
 include Views

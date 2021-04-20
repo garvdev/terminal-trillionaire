@@ -2,7 +2,7 @@ require "tty-table"
 require "tty-pie"
 require "curses"
 require "io/console"
-require_relative "../Helpers.rb"
+require_relative "../helpers.rb"
 
 include Curses
 
