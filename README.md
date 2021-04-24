@@ -36,7 +36,7 @@ The main features of **Terminal Trillionaire** are as follows:
 
 The market view will provide a real-time rapidly updating catalogue of securities and their corresponding prices. The securities will be identified by their **ticker** on the stock exchange, followed by a series of prices at various timestamps so that the user can identify the current price and perform trend analyses to inform their decision making. The backbone of this feed will be a mathematical model which can be called upon rapidly to generate simulated prices based on the current time. By leveraging the `Time` object to calculate prices in real-time, it effectively becomes a pseudo-database for consistent prices that each terminal can drawn upon, enabling a single market environment across all machines running this application. Users can therefore compete fairly against each other without any communications link.
 
-![Pricing Algorithm](./docs/pricing-algorithm.png)
+![Pricing Algorithm](./docs/pricing_algorithm.png)
 
 *Note that this algorithm is very simplistic and assumes continuously linear growth of the underlying asset.*
 *Further details can be found in the experimental section of `./docs/`.*
@@ -61,7 +61,7 @@ Additionally, a **help section** will be provided from within the application to
 
 The majority of **errors** will likely occur during the user input sections of the application. A large portion of these will be mitigated by the use of **prompts**, limiting the user input to the options provided. In stages where this can't be utilised, such as username input and trade quantity queries, errors will be handled gracefully with all **edge cases** considered. Robust validation methods involving **regular expressions** and **whitespace removal** will ensure that the application only accepts input which satisfies **syntactical** and **logical** criteria. Any issues will cause the application to raise exceptions and request remediated input.
 
-![User Prompts](./docs/user-prompts.jpeg)
+![User Prompts](./docs/user_prompts.jpeg)
 
 *User Prompt Brainstorming*
 
@@ -69,8 +69,8 @@ The majority of **errors** will likely occur during the user input sections of t
 
 #### Control Flow
 
-![Main Flow](./docs/main-flow.png)
-![Trade Flow](./docs/trade-flow.png)
+![Main Flow](./docs/main_flow.png)
+![Trade Flow](./docs/trade_flow.png)
 
 *Note - Quick routing made possible by command line arguments.*
 *User can skip entire introduction stage (green) and start the application at their desired feature.*
@@ -121,8 +121,8 @@ For the Agile approach, I have defined several user/client stories to help deter
 
 **Project Management** and **Prioritisation** for this application will be conducted using the **Kanban** method via a **Trello** board (link at the top of the page).
 
-![Trello Board](./docs/trello-board.png)
-![Trello Timeline](./docs/trello-timeline.png)
+![Trello Board](./docs/trello_board.png)
+![Trello Timeline](./docs/trello_timeline.png)
 
 
 ##### Post-Mortem
@@ -178,14 +178,14 @@ The first two columns of the board listed **Research** topics and **Questions** 
 
 #### Screenshots
 
-![](./docs/title-page.png)
-![](./docs/trillionaire-briefing.png)
-![](./docs/main-console.png)
-![](./docs/market-feed.png)
-![](./docs/portfolio-view.png)
-![](./docs/trading-platform.png)
-![](./docs/trade-history.png)
-![](./docs/help-section.png)
+![](./docs/title_page.png)
+![](./docs/trillionaire_briefing.png)
+![](./docs/main_console.png)
+![](./docs/market_feed.png)
+![](./docs/portfolio_view.png)
+![](./docs/trading_platform.png)
+![](./docs/trade_history.png)
+![](./docs/help_section.png)
 
 <hr>
 
