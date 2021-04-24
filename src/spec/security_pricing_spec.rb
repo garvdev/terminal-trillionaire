@@ -1,5 +1,5 @@
 require 'benchmark'
-require_relative "../app/models/market/SecurityPricing.rb"
+require_relative "../lib/models/market/security_pricing.rb"
 include Market::SecurityPricing
 
 describe "SecurityPricing" do

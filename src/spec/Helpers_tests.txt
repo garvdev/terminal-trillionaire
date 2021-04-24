@@ -1104,3 +1104,24 @@ Helpers
 Finished in 27.06 seconds (files took 0.20988 seconds to load)
 2 examples, 0 failures
 
+
+An error occurred while loading ./helpers_spec.rb.
+Failure/Error: require_relative "../app/views/helpers.rb"
+
+LoadError:
+  cannot load such file -- /Users/garveychan/GitHub/terminal-trillionaire/src/app/views/helpers.rb
+# ./helpers_spec.rb:1:in `require_relative'
+# ./helpers_spec.rb:1:in `<top (required)>'
+No examples found.
+
+Finished in 0.00004 seconds (files took 0.16926 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
+
+
+Helpers
+  should return validated inputs when receiving integers with no special characters
+  should return validated inputs when receiving strings with no special characters
+
+Finished in 27.08 seconds (files took 0.21554 seconds to load)
+2 examples, 0 failures
+
