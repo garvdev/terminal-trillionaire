@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require "../lib/controllers/initialisation.rb"
-require "../lib/controllers/prompt.rb"
+require "../app/controllers/initialisation.rb"
+require "../app/controllers/prompt.rb"
 include Controllers::Initialisation
 include Controllers::Prompt
 
