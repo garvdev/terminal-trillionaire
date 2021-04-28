@@ -152,7 +152,7 @@ The first two columns of the board listed **Research** topics and **Questions** 
     - `tty-cursor` `~> 0.7.1`
 
 **Running the Application**
-- Navigate to the `/bin/` file and locate the `RUNME.sh` script.
+- Navigate to the `/bin/` file and locate the `run` script. Enter `./run` in your terminal to start the application.
 - This script will verify that you have the required **gems** installed using `bundle check`, and automatically run `bundle install` to install any missing gems if necessary.
 - If there are no issues, it will begin the application.
 - Alternatively, you can simply execute the `terminal-trillionaire` file.
