@@ -30,6 +30,7 @@ module Views
             intro.each do |msg|
                 next if msg[1] != :all && msg[1] != status
                 win.setpos(1,2)
+                win.clear
                 win.addstr("#{msg[0]}")
                 win.refresh
                 sleep_keypress(msg[2],win)
