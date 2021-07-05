@@ -1,49 +1,50 @@
-require "curses"
-require_relative "../helpers.rb"
+require 'curses'
+require_relative '../helpers'
 
 include Curses
 include Views
 
 module Views
-    module Landing
-        def self.title(user, status)
-            Curses.init_screen
-            Curses.start_color
-            system 'clear'
-            curs_set(0)
-            noecho
+  module Landing
+    def self.title(user, status)
+      Curses.init_screen
+      Curses.start_color
+      system 'clear'
+      curs_set(0)
+      noecho
 
-            win = Curses.stdscr
-            win.clear
-            sleep 1 
+      win = Curses.stdscr
+      win.clear
+      sleep 1
 
-            intro = [["Hey there, #{user}!        ",:all,2],
-                        ["It's good to see you again.",:old,2],
-                        ["It's good to have you here.",:new,2],
-                        ["Welcome to.                ",:new,1],
-                        ["Welcome to..               ",:new,1],
-                        ["Welcome to...              ",:new,1],
-                        ["Welcome back to.           ",:old,1],
-                        ["Welcome back to..          ",:old,1],
-                        ["Welcome back to...         ",:old,1],
-                        ["                           ",:all,0]]
-            intro.each do |msg|
-                next if msg[1] != :all && msg[1] != status
-                win.setpos(1,2)
-                win.clear
-                win.addstr("#{msg[0]}")
-                win.refresh
-                sleep_keypress(msg[2],win)
-            end
+      intro = [["Hey there, #{user}!        ", :all, 2],
+               ["It's good to see you again.", :old, 2],
+               ["It's good to have you here.", :new, 2],
+               ['Welcome to.                ', :new, 1],
+               ['Welcome to..               ', :new, 1],
+               ['Welcome to...              ', :new, 1],
+               ['Welcome back to.           ', :old, 1],
+               ['Welcome back to..          ', :old, 1],
+               ['Welcome back to...         ', :old, 1],
+               ['                           ', :all, 0]]
+      intro.each do |msg|
+        next if msg[1] != :all && msg[1] != status
 
-            t = Thread.new do 
-                Curses.init_pair(1, Curses::COLOR_GREEN, Curses::COLOR_BLACK)
-                Curses.init_pair(2, Curses::COLOR_WHITE, Curses::COLOR_BLACK)
-                flash = true
-                while true
-                    flash ? (win.attrset(color_pair(1)); flash = false): (win.attrset(color_pair(2)); flash = true)
-                    win.setpos(0,0)
-                    win.addstr("
+        win.setpos(1, 2)
+        win.clear
+        win.addstr((msg[0]).to_s)
+        win.refresh
+        sleep_keypress(msg[2], win)
+      end
+
+      t = Thread.new do
+        Curses.init_pair(1, Curses::COLOR_GREEN, Curses::COLOR_BLACK)
+        Curses.init_pair(2, Curses::COLOR_WHITE, Curses::COLOR_BLACK)
+        flash = true
+        while true
+          flash ? (win.attrset(color_pair(1)); flash = false) : (win.attrset(color_pair(2)); flash = true)
+          win.setpos(0, 0)
+          win.addstr("
   /$$$$$$$$                                   /$$                     /$$       /$$$$$$$$           /$$ /$$ /$$ /$$                               /$$
  |__  $$__/                                  |__/                    | $$      |__  $$__/          |__/| $$| $$|__/                              |__/
     | $$     /$$$$$$   /$$$$$$  /$$$$$$/$$$$  /$$ /$$$$$$$   /$$$$$$ | $$         | $$     /$$$$$$  /$$| $$| $$ /$$  /$$$$$$  /$$$$$$$   /$$$$$$  /$$  /$$$$$$   /$$$$$$
@@ -53,26 +54,26 @@ module Views
     | $$   |  $$$$$$$| $$      | $$ | $$ | $$| $$| $$  | $$|  $$$$$$$| $$         | $$   | $$      | $$| $$| $$| $$|  $$$$$$/| $$  | $$|  $$$$$$$| $$| $$      |  $$$$$$$
     |__/    \\_______/|__/      |__/ |__/ |__/|__/|__/  |__/ \\_______/|__/         |__/   |__/      |__/|__/|__/|__/ \\______/ |__/  |__/ \\_______/|__/|__/       \\_______/
                     ")
-                    win.refresh
-                    sleep 0.5
-                end
-            end
-
-            Curses.init_pair(2, Curses::COLOR_WHITE, Curses::COLOR_BLACK)
-            win.attrset(color_pair(2))
-            sleep_keypress(2,win)
-            win.addstr("\n  **Loud Airhorn Noises**")
-            win.refresh
-            sleep_keypress(2,win)
-            win.addstr("\n  Note - this simulator is best experienced in fullscreen.")
-            win.refresh
-            sleep_keypress(2,win)
-            win.addstr("\n  Press any key to continue.                              ")
-            win.refresh
-            
-            win.getch
-            t.kill 
-            Curses.close_screen
+          win.refresh
+          sleep 0.5
         end
+      end
+
+      Curses.init_pair(2, Curses::COLOR_WHITE, Curses::COLOR_BLACK)
+      win.attrset(color_pair(2))
+      sleep_keypress(2, win)
+      win.addstr("\n  **Loud Airhorn Noises**")
+      win.refresh
+      sleep_keypress(2, win)
+      win.addstr("\n  Note - this simulator is best experienced in fullscreen.")
+      win.refresh
+      sleep_keypress(2, win)
+      win.addstr("\n  Press any key to continue.                              ")
+      win.refresh
+
+      win.getch
+      t.kill
+      Curses.close_screen
     end
+  end
 end
