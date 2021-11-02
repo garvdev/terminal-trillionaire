@@ -10,9 +10,7 @@
 
 ## Software Development Plan
 
-[GitHub Link](https://github.com/garvdev/terminal-trillionaire)
-
-[Alternate GitHub Link](https://github.com/garveycodes/terminal-trillionaire)
+[GitHub Link](https://github.com/garveychan/terminal-trillionaire)
 
 [Trello Link](https://trello.com/b/rfHyAJYC/)
 
